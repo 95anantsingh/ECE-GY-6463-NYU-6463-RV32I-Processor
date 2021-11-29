@@ -3,7 +3,7 @@
 
 
 // Program Counter
-module pc(
+module PC(
     input wire clk,
     input wire rstn,
     input wire pc_we,
