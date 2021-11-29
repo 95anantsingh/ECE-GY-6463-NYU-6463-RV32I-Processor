@@ -1,29 +1,9 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/19/2021 12:32:07 AM
-// Design Name: 
-// Module Name: ImmExt
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module ImmExt(
-input wire [1:0] opcode,
-input wire [31:0] instr,
-output [31:0] ext_imm
+    input wire [1:0] opcode,
+    input wire [31:0] instr,
+    output wire[31:0] ext_imm
     );
     
     reg [31:0] imm;

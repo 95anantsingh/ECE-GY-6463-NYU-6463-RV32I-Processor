@@ -328,7 +328,7 @@ module ControlUnit(
     reg next_state;
     
     always @(posedge clk or negedge rstn)
-        if(~rstn)
+        if(!rstn)
             state <= 2'd0;
         else
             state <= next_state;    
@@ -345,26 +345,26 @@ module ControlUnit(
             3'd0: begin                  //Move to instruction decode and execute stage for all instruction types
                 imem_rd <= 1;
                 next_state <= 3'd1; 
-                if(halt)next_state <= 3'd4;
+                if(halt) next_state <= 3'd4;
             end
             3'd1: begin
                 if (load | store)
-                    state <= 3'd2;
+                    next_state <= 3'd2;
                 else                     //No need for Memory stage
                     state <=3'd3;   
-                if(halt)state <= 3'd4;
+                if(halt) next_state <= 3'd4;
             end
             3'd2: begin                  //WB and update PC after MEM
                 if (load)  dmem_rd <= 1;
                 if (store)  dmem_we <= dmem_we_op;
-                state <= 3'd3;     
-                if(halt)state <= 3'd4;
+                next_state <= 3'd3;     
+                if(halt) next_state <= 3'd4;
             end
             3'd3: begin                  //Always fetch instruction after PC is updated
                 pc_we <=1;
                 rf_we <=1;
-                state <=3'd0;      
-                if(halt)state <= 3'd4;
+                next_state <=3'd0;      
+                if(halt) next_state <= 3'd4;
             end
             3'd4: begin                  // Halt 
                 //Do nothing
