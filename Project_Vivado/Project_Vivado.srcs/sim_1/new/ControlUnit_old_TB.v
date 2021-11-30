@@ -60,7 +60,7 @@ module ControlUnit_old_TB(
         end
     end
     
-     initial begin
+    initial begin: TEST_PROCESS
         file_pointer = $fopen("CU_tests.txt", "r");
         if (file_pointer ==0) begin
             $display("Cannot open the test cases file");

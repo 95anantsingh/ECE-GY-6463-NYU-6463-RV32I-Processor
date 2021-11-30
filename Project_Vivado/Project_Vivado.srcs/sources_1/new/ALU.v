@@ -1,10 +1,11 @@
 `timescale 1ns / 1ps
+`default_nettype none
 
 module ALU(
     input wire [31:0] operand1,                 // First operand
     input wire [31:0] operand2,                 // Second operand
     input wire [3:0] operation,                 // The operation to be performed on the operands
-    output reg [31:0] ALUresult
+    output reg [31:0] ALUresult                 // ALU Output
     );
     
    always @(*) begin
