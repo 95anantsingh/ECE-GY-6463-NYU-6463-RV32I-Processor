@@ -6,7 +6,7 @@
 module PC(
     input wire clk,
     input wire rstn,
-    input wire pc_we,
+    input wire we,
     input wire [31:0] pc_in,
     output wire [31:0] pc_out
     );

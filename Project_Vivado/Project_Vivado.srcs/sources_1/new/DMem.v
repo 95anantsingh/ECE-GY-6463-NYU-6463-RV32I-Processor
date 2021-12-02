@@ -49,7 +49,7 @@ module DMem(
         rom[1] <= 32'd`ANANT;
         rom[2] <= 32'd`EESHA;
         
-        //IO
+        // IO
         rom[3]<=32'd0;
         rom[4]<=32'd0;
     end

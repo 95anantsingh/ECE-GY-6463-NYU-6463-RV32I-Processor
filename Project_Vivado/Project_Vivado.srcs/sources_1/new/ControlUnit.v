@@ -183,6 +183,8 @@ module ControlUnit(
         op_mux <= 0;
 
 
+//assign pc_mux ? ALU : pc+4
+
         case(opcode)
             default: begin
                 $display("Invalid OPCODE");

@@ -58,7 +58,7 @@ module IMem_TB(
         if(instr_out!=32'h00001117) $fatal("The Instruction memory or ROM is not reading the value at desired address correctly");
         #3
         
-    
+     
         $display("All tests passed");
         $finish;
     end 

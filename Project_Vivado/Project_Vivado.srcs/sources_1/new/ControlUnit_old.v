@@ -234,7 +234,7 @@ module ControlUnit_old(
             state <= 3'd0;
         else
             case (state)
-                3'd0: begin                  //Move to instruction decode and execute stage for all instruction types
+                3'd0: begin                  // Move to instruction decode and execute stage for all instruction types
                     im_rd <= 1;
                     state <= 3'd1; 
                     if(halt)state <= 3'd4;
@@ -242,17 +242,17 @@ module ControlUnit_old(
                 3'd1: begin
                     if (isload | stype)
                         state <= 3'd2;
-                    else                     //No need for Memory stage
+                    else                     // No need for Memory stage
                         state <=3'd3;   
                     if(halt)state <= 3'd4;
                 end
-                3'd2: begin                  //WB and update PC after MEM
+                3'd2: begin                  // WB and update PC after MEM
                     if (isload)  dm_rd <= 1;
                     if (stype)  dm_we <= dm_we_tmp;
                     state <= 3'd3;     
                     if(halt)state <= 3'd4;
                 end
-                3'd3: begin                  //Always fetch instruction after PC is updated
+                3'd3: begin                  // Always fetch instruction after PC is updated
                     pc_we <=1;
                     rf_we <=1;
                     state <=3'd0;      
