@@ -13,7 +13,7 @@ module RegFile_TB(
     wire [31:0] rs1_data;          
     wire [31:0] rs2_data;
     
-    RegFile DUT(.clk(clk), .we(we), .rd(rd),.rs1(rs1), .rs2(rs2),
+    RegFiles DUT(.clk(clk), .we(we), .rd(rd),.rs1(rs1), .rs2(rs2),
                 .rd_data_in(rd_data_in),.rs1_data(rs1_data), .rs2_data(rs2_data));    
     
     initial begin: CLK_GEN
