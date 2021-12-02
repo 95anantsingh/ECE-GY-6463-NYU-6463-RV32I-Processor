@@ -15,9 +15,9 @@ module BranComp(
             3'd1:   // BNE
                 bc_out <= (data_in1==data_in2) ? 0:1;
             3'd2:   // BLT
-                bc_out <= ($signed(data_in1) < $signed(data_in2)) ? 1 :0;
+                bc_out <= ($signed(data_in1) < $signed(data_in2)) ? 1:0;
             3'd3:   // BGE
-                bc_out <= ($signed(data_in1) < $signed(data_in2)) ? 0 :1;
+                bc_out <= ($signed(data_in1) < $signed(data_in2)) ? 0:1;
             3'd4:   // BLTU
                 bc_out <= (data_in1 < data_in2)? 1:0;
             3'd5:   // BGEU

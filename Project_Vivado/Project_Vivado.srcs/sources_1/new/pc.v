@@ -7,8 +7,8 @@ module PC(
     input wire clk,
     input wire rstn,
     input wire we,
-    input wire [31:0] pc_in,
-    output wire [31:0] pc_out
+    input wire [31:0] data_in,
+    output wire [31:0] data_out
     );
 
     reg [31:0] current_pc;
@@ -19,8 +19,8 @@ module PC(
             current_pc <= 32'h01000000;
         end 
         else if(we) begin
-            current_pc <= pc_in;
+            current_pc <= data_in;
         end
     end
-    assign pc_out = current_pc;
+    assign data_out = current_pc;
 endmodule
