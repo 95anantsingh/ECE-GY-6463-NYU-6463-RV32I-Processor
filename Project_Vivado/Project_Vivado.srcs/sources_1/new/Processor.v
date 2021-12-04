@@ -41,8 +41,9 @@ module Processor(
     ImmExt ImmediateExtender(.opcode(IE_opc),.instr(IE_instr),.ext_imm(IE_out));
     assign IE_instr = IM_out;
     
+    
     // Branch Comparator
-    wire [1:0] BC_opc;
+    wire [2:0] BC_opc;
     wire [31:0] BC_in1;
     wire [31:0] BC_in2;
     wire BC_out;
@@ -85,10 +86,10 @@ module Processor(
     wire MCU_alu_mux1; 
     wire MCU_alu_mux2; 
     wire [1:0] MCU_op_mux;
-    ControlUnit MainController(.clk(clk), .rstn(rstn), .pc_we(PC_we), .imem_rd(IM_rd), .rf_we(RF_we), .imm_op(IE_opc),
-                               .data_op(DE_opc), .bc_out(BC_out), .bc_op(BC_opc), .alu_op(ALU_opc), .dmem_we(DM_we),
-                               .dmem_rd(DM_rd), .pc_mux(MCU_pc_mux), .rfile_mux(MCU_rfile_mux), .alu_mux1(MCU_alu_mux1), 
-                               .alu_mux2(MCU_alu_mux2), .op_mux(MCU_op_mux));
+    ControlUnit MainController(.clk(clk), .rstn(rstn), .instruction(IM_out),.pc_we(PC_we), .imem_rd(IM_rd), .rf_we(RF_we),
+                               .imm_op(IE_opc), .data_op(DE_opc), .bc_out(BC_out), .bc_op(BC_opc), .alu_op(ALU_opc),
+                               .dmem_we(DM_we), .dmem_rd(DM_rd), .pc_mux(MCU_pc_mux), .rfile_mux(MCU_rfile_mux),
+                               .alu_mux1(MCU_alu_mux1), .alu_mux2(MCU_alu_mux2), .op_mux(MCU_op_mux));
     
     // Final Output of a Cycle
     wire [31:0] F_out;

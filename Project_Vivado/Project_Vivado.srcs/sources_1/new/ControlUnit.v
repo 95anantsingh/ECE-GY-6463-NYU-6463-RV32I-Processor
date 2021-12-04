@@ -31,7 +31,7 @@ module ControlUnit(
     
     // BC
     input wire bc_out,
-    output reg [1:0] bc_op,
+    output reg [2:0] bc_op,
     
     // ALU
     //input wire [31:0] alu_out,
@@ -71,8 +71,7 @@ module ControlUnit(
      //State Variables
      reg [0:2] state;
      reg [0:2] next_state;
-     
-     reg done=0;
+
      
     //Combinational Logic
     always@(*) begin
@@ -98,7 +97,6 @@ module ControlUnit(
             `LUI: begin
                 // Loads the immediate value into the upper 20 bits of the 
                 // target register rd and sets the lower bits to 0
-                //done<=1;
                 op_mux <= 2'd2;
                 imm_op <= 3'd4;         // U-TYPE
             end
@@ -193,11 +191,16 @@ module ControlUnit(
     
 
     // Next State Machine
-    always @(posedge clk or negedge rstn)
-        if(!rstn)
+    always @(posedge clk or negedge rstn) begin
+        if(!rstn) begin
             state <= `IF;
+            load <= 0;
+            store <= 0;
+            halt <= 0;
+        end
         else
             state <= next_state;    
+    end
     
     // State machine
     always @(state) begin
