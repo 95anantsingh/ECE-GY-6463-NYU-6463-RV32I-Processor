@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
-
+`include "defines.vh"
+`default_nettype none
 
 module ALU_TB(
 
@@ -10,7 +11,7 @@ module ALU_TB(
     reg [3:0] operation;                   // The operation to be performed on the operands
     wire [31:0] ALUresult;
     
-    ALU DUT(
+    ALU dut(
         .operand1(operand1), .operand2(operand2), .operation(operation), .ALUresult(ALUresult)
     );
     
@@ -18,31 +19,31 @@ module ALU_TB(
         #5;
         operand1 <= 32'd10; 
         operand2 <= 32'd12;       
-        operation <= 4'd0;                                                                              //ADD
+        operation <= `ADD;                                                                              //ADD
         #5;
         if (ALUresult != 32'h00000016) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd1;                                                                              //SUB
+        operation <= `SUB;                                                                              //SUB
         #5;
         if (ALUresult != 32'hfffffffe) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd2;                                                                              //SLL
+        operation <= `SLL;                                                                              //SLL
         #5;
         if (ALUresult != 32'h0000a000) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd3;                                                                              //SLT
+        operation <= `SLT;                                                                              //SLT
         #5;
         if (ALUresult != 32'h00000001) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd4;                                                                              //SLTU
+        operation <= `SLTU;                                                                              //SLTU
         #5;
         if (ALUresult != 32'h00000001) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd5;                                                                              //XOR
+        operation <= `XOR;                                                                              //XOR
         #5;
         if (ALUresult != 32'h00000006) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd6;                                                                              //SRL
+        operation <= `SRL;                                                                              //SRL
         #5;
         if (ALUresult != 32'h00000000) $fatal("The expected output was not received");
         #5;
@@ -50,45 +51,45 @@ module ALU_TB(
         #5;
         if (ALUresult != 32'h00000000) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd7;                                                                              //SRA
+        operation <= `SRA;                                                                              //SRA
         #5;
         if (ALUresult != 32'h00000000) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd8;                                                                              //OR
+        operation <= `OR;                                                                              //OR
         #5;
         if (ALUresult != 32'h0000000e) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd9;                                                                              //AND
+        operation <= `AND;                                                                              //AND
         #5;
         if (ALUresult != 32'h00000008) $fatal("The expected output was not received");
         #5;
         operand1 <= 32'b10011011100110101100101011110011;               //Decimal 2610612979
         operand2 <= 32'b00101110010101101001111001010110;               //Decimal 777428566
-        operation <= 4'd0;                                                                              //ADD
+        operation <= `ADD;                                                                              //ADD
         #5;
         if (ALUresult != 32'hc9f16949) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd1;                                                                              //SUB
+        operation <= `SUB;                                                                              //SUB
         #5;
         if (ALUresult != 32'h6d442c9d) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd2;                                                                              //SLL
+        operation <= `SLL;                                                                              //SLL
         #5;
         if (ALUresult != 32'hbcc00000) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd3;                                                                              //SLT
+        operation <= `SLT;                                                                              //SLT
         #5;
         if (ALUresult != 32'h00000001) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd4;                                                                              //SLTU
+        operation <= `SLTU;                                                                              //SLTU
         #5;
         if (ALUresult != 32'h00000000) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd5;                                                                              //XOR
+        operation <= `XOR;                                                                              //XOR
         #5;
         if (ALUresult != 32'hb5cc54a5) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd6;                                                                              //SRL
+        operation <= `SRL;                                                                              //SRL
         #5;
         if (ALUresult != 32'h0000026e) $fatal("The expected output was not received");
         #5;
@@ -96,15 +97,15 @@ module ALU_TB(
         #5;
         if (ALUresult != 32'h0000026e) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd7;                                                                              //SRA
+        operation <= `SRA;                                                                              //SRA
         #5;
         if (ALUresult != 32'hfffffe6e) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd8;                                                                              //OR
+        operation <= `OR;                                                                              //OR
         #5;
         if (ALUresult != 32'hbfdedef7) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd9;                                                                              //AND
+        operation <= `AND;                                                                              //AND
         #5;
         if (ALUresult != 32'h0a128a52) $fatal("The expected output was not received");
         #10;
