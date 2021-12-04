@@ -63,7 +63,7 @@ module ControlUnit(
 
     reg load;
     reg store;
-    reg [3:0] dmem_we_op;
+    reg [3:0] dmem_we_temp;
     reg halt;
     
      //state variables
@@ -154,6 +154,14 @@ module ControlUnit(
                 store<=1;
                 imm_op <= 3'd3;         // S-TYPE
                 alu_op <= `ADD;
+                case (funct3)
+                    `SB:
+                        dmem_we_temp <= 4'b0001;
+                    `SH:
+                        dmem_we_temp <= 4'b0011;
+                    `SW:
+                        dmem_we_temp <= 4'b1111;
+                endcase
             end
             
             `IMM:begin
@@ -216,7 +224,7 @@ module ControlUnit(
             end
             `MEM: begin                  //WB and update PC after MEM
                 if (load)  dmem_rd <= 1;
-                if (store)  dmem_we <= dmem_we_op;
+                if (store)  dmem_we <= dmem_we_temp;
                 next_state <= `WB;     
                 if(halt) next_state <= `HALT;
             end
