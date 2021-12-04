@@ -6,11 +6,13 @@ module Processor(
     input wire rstn
     );
     
+    
     // Program Counter
     wire PC_we;
     wire [31:0] PC_in;
     wire [32:0] PC_out;
     PC ProgramCounter(.clk(clk),.rstn(rstn),.we(PC_we),.data_in(PC_in),.data_out(PC_out));
+    
     
     // Instruction Memory
     wire IM_rd;                        
@@ -18,6 +20,7 @@ module Processor(
     wire [31:0] IM_out;   
     IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .data_out(IM_out));
     assign IM_addr_in = PC_out;
+    
     
     // Register File
     wire RF_we;               
@@ -40,6 +43,7 @@ module Processor(
     wire [31:0] IE_out; 
     ImmExt ImmediateExtender(.opcode(IE_opc),.instr(IE_instr),.ext_imm(IE_out));
     assign IE_instr = IM_out;
+    
     
     // Branch Comparator
     wire [1:0] BC_opc;
