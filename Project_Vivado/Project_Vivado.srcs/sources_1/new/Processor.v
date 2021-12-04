@@ -6,7 +6,6 @@ module Processor(
     input wire rstn
     );
     
-    
     wire PC_we;
     wire [31:0] PC_in;
     wire [32:0] PC_out;
@@ -61,9 +60,7 @@ module Processor(
     assign PC_in = (pc_mux) ? ALU_out : PC_out+32'd4 ;
     assign RF_rd_data_in = (rf_mux) ? PC_out+32'd4 : F_out;
     assign ALU_in1 = (alu_mux1) ? PC_out : RF_rs1_data;
-    assign ALU_in2 = (alu_mux2) ? IE_out : RF_rs2_data;
+    assign ALU_in2 = (alu_mux2) ? RF_rs2_data : IE_out;
     assign F_out = (op_mux) ? DE_out : ALU_out;  
-    
-      
-    
+
 endmodule
