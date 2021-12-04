@@ -10,13 +10,13 @@ module Processor(
     wire PC_we;
     wire [31:0] PC_in;
     wire [32:0] PC_out;
-    PC ProgramCounter(.clk(clk),.rstn(rstn),.we(PC_we),.data_in(PC_in),.data_out(PC_out));
+    PCnt ProgramCounter(.clk(clk),.rstn(rstn),.we(PC_we),.data_in(PC_in),.data_out(PC_out));
     
     // Instruction Memory
     wire IM_rd;                        
     wire [31:0] IM_addr_in;   
     wire [31:0] IM_out;   
-    IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .data_out(IM_out));
+    IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .instr_out(IM_out));
     assign IM_addr_in = PC_out;
     
     // Register File
@@ -106,3 +106,20 @@ module Processor(
                    ALU_out;
 
 endmodule
+
+// Processor TCL Simulation Commands
+
+/*
+restart
+add_force {/Processor/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+
+add_force {/Processor/rstn} -radix hex {0 0ns}
+run 1ns
+add_force {/ControlUnit/rstn} -radix hex {1 0ns}
+4nsns
+
+000022b7 // LUI
+00000073 // HALT
+0000a297 // AUIPC
+
+*/

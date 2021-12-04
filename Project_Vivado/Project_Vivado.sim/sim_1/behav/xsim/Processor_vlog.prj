@@ -7,7 +7,7 @@ verilog xil_defaultlib  --include "../../../../Project_Vivado.srcs/sources_1/new
 "../../../../Project_Vivado.srcs/sources_1/new/DataExt.v" \
 "../../../../Project_Vivado.srcs/sources_1/new/IMem.v" \
 "../../../../Project_Vivado.srcs/sources_1/new/ImmExt.v" \
-"../../../../Project_Vivado.srcs/sources_1/new/PC.v" \
+"../../../../Project_Vivado.srcs/sources_1/new/PCnt.v" \
 "../../../../Project_Vivado.srcs/sources_1/new/RegFile.v" \
 "../../../../Project_Vivado.srcs/sources_1/new/Processor.v" \
 
