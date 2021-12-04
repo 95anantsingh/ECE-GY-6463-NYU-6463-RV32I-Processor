@@ -9,7 +9,7 @@ module Processor(
     // Program Counter
     wire PC_we;
     wire [31:0] PC_in;
-    wire [32:0] PC_out;
+    wire [31:0] PC_out;
     PCnt ProgramCounter(.clk(clk),.rstn(rstn),.we(PC_we),.data_in(PC_in),.data_out(PC_out));
     
     // Instruction Memory
@@ -115,8 +115,8 @@ add_force {/Processor/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
 
 add_force {/Processor/rstn} -radix hex {0 0ns}
 run 1ns
-add_force {/ControlUnit/rstn} -radix hex {1 0ns}
-4nsns
+add_force {/Processor/rstn} -radix hex {1 0ns}
+run 4ns
 
 000022b7 // LUI
 00000073 // HALT
