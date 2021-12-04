@@ -61,13 +61,14 @@ module ControlUnit(
     
     //reg [11:0] imm12;
     //reg [31:12] imm20;
-
+    
+    // State Machine Signals
     reg load;
     reg store;
     reg [3:0] dmem_we_temp;
     reg halt;
     
-     //state variables
+     //State Variables
      reg [0:2] state;
      reg [0:2] next_state;
      
@@ -85,10 +86,10 @@ module ControlUnit(
         //imm12 <= instruction[31:20];
         //imm20 <= instruction[31:12];   
 
-        // default Enables
-        load <=0;
-        store <=0;
-        halt <=0;
+        // default State Machine Signals
+        load <= 0;
+        store <= 0;
+        halt <= 0;
         
         // default Select Lines
         pc_mux <= 0;
@@ -109,7 +110,7 @@ module ControlUnit(
                 // Forms a 32-bit offset from the 20-bit value by filling 
                 // the lower bits with zeros, adds this to pc_out, and stores
                 // the result in rd
-                alu_mux1<= 1;
+                alu_mux1 <= 1;
                 imm_op <=3'd4;          // U-TYPE
                 alu_op <= `ADD;
                                
@@ -118,9 +119,9 @@ module ControlUnit(
             `JAL: begin                 // J-TYPE
                 // Jump to pc_out=pc_out+(sign-extended immediate value) and store
                 // the current pc_out address+4 in register rd.
-                pc_mux <=1;
-                rfile_mux <=1;
-                alu_mux1 <=1;
+                pc_mux <= 1;
+                rfile_mux <= 1;
+                alu_mux1 <= 1;
                 imm_op <= 3'd0;                 
                 alu_op <= `ADD;
             end
@@ -128,8 +129,8 @@ module ControlUnit(
             `JALR: begin                // I-TYPE
                 // Jump to pc_out=rs1 register value + (sign-extended immediate value)
                 // and store the current pc_out address + 4 in register rd
-                pc_mux <=1;
-                rfile_mux <=1;
+                pc_mux <= 1;
+                rfile_mux <= 1;
                 imm_op <= 3'd1;          
                 alu_op <= `ADD;
             end
@@ -140,7 +141,7 @@ module ControlUnit(
                 end
                 alu_mux1 <= 1;
                 imm_op <= 3'd2;        
-                alu_op <=  `ADD;
+                alu_op <= `ADD;
                 bc_op <= funct3;
             end
             
@@ -191,12 +192,11 @@ module ControlUnit(
             default: begin
                 $display("Invalid OPCODE");
             end
-        
         endcase
     end
     
 
-    // Update State
+    // Next State Machine
     always @(posedge clk or negedge rstn)
         if(!rstn)
             state <= `IF;
@@ -213,31 +213,32 @@ module ControlUnit(
         
         case (state)
             // Instruction Fetch
-            `IF: begin                  //Move to instruction decode and execute stage for all instruction types
+            `IF: begin                  // Move to instruction decode and execute stage for all instruction types
                 imem_rd <= 1;
                 next_state <= `ID_EX;
             end
             // Instruction Decode and Execution
             `ID_EX: begin
-                if (load | store)
-                    next_state <= `MEM;
-                else                     //No need for Memory stage
-                    next_state <=`WB;   
-                if(halt) next_state <= `HALT;
+                if(!halt) begin
+                    if (load | store)
+                        next_state <= `MEM;
+                    else                    // No need for Memory stage
+                        next_state <= `WB;
+                end
             end
             // Memory Read Write
-            `MEM: begin                  //WB and update PC after MEM
+            `MEM: begin                 // WB and update PC after MEM
                 if (load)  dmem_rd <= 1;
                 if (store)  dmem_we <= dmem_we_temp;
                 next_state <= `WB;
             end
             // Wright Back
-            `WB: begin                  //Always fetch instruction after PC is updated
+            `WB: begin                  // Always fetch instruction after PC is updated
                 pc_we <= 1;
                 rf_we <= 1;
                 next_state <= `IF;
             end
-            `HALT: begin                  // Halt 
+            `HALT: begin                // Halt 
                 //Do nothing
             end
        endcase

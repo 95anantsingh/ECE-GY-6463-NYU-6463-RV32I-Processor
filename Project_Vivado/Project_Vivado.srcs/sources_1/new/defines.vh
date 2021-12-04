@@ -57,15 +57,15 @@
 `define XOR     4'b0100 
 `define SRL     4'b0101
 `define SRA     4'b1101 
-`define OR       4'b0110 
+`define OR      4'b0110 
 `define AND     4'b0111 
 
 // SYSTEM
 `define ECALL_EBREAK  3'b000 
 
 // STATES
-`define IF              3'd0        // Instruction Fetch
-`define ID_EX        3'd1        // Instruction Decode and Execute 
-`define MEM         3'd2        // Data Memory
-`define WB           3'd3        // Write back and Update PC
-`define HALT        3'd4        // HALT state
+`define IF      3'd0        // Instruction Fetch
+`define ID_EX   3'd1        // Instruction Decode and Execute 
+`define MEM     3'd2        // Data Memory
+`define WB      3'd3        // Write back and Update PC
+`define HALT    3'd4        // HALT state

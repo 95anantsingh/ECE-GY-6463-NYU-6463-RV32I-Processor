@@ -106,3 +106,12 @@ module Processor(
                    ALU_out;
 
 endmodule
+
+// DMem TCL Simulation Commands
+
+/*
+restart
+add_force {/ControlUnit/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+
+
+*/
