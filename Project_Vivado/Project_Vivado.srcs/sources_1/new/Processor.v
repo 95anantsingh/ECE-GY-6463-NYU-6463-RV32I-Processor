@@ -6,13 +6,11 @@ module Processor(
     input wire rstn
     );
     
-    
     // Program Counter
     wire PC_we;
     wire [31:0] PC_in;
     wire [32:0] PC_out;
     PC ProgramCounter(.clk(clk),.rstn(rstn),.we(PC_we),.data_in(PC_in),.data_out(PC_out));
-    
     
     // Instruction Memory
     wire IM_rd;                        
@@ -20,7 +18,6 @@ module Processor(
     wire [31:0] IM_out;   
     IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .data_out(IM_out));
     assign IM_addr_in = PC_out;
-    
     
     // Register File
     wire RF_we;               
@@ -43,7 +40,6 @@ module Processor(
     wire [31:0] IE_out; 
     ImmExt ImmediateExtender(.opcode(IE_opc),.instr(IE_instr),.ext_imm(IE_out));
     assign IE_instr = IM_out;
-    
     
     // Branch Comparator
     wire [1:0] BC_opc;
@@ -85,13 +81,13 @@ module Processor(
    
     // Control Unit   
     wire MCU_pc_mux;
-    wire MCU_rf_mux;
+    wire MCU_rfile_mux;
     wire MCU_alu_mux1; 
     wire MCU_alu_mux2; 
     wire [1:0] MCU_op_mux;
     ControlUnit MainController(.clk(clk), .rstn(rstn), .pc_we(PC_we), .imem_rd(IM_rd), .rf_we(RF_we), .imm_op(IE_opc),
                                .data_op(DE_opc), .bc_out(BC_out), .bc_op(BC_opc), .alu_op(ALU_opc), .dmem_we(DM_we),
-                               .dmem_rd(DM_rd), .pc_mux(MCU_pc_mux), .rf_mux(MCU_rf_mux), .alu_mux1(MCU_alu_mux1), 
+                               .dmem_rd(DM_rd), .pc_mux(MCU_pc_mux), .rfile_mux(MCU_rfile_mux), .alu_mux1(MCU_alu_mux1), 
                                .alu_mux2(MCU_alu_mux2), .op_mux(MCU_op_mux));
     
     // Final Output of a Cycle
@@ -99,23 +95,14 @@ module Processor(
     
     assign PC_in = (MCU_pc_mux) ? ALU_out : PC_out + 32'd4 ;
 
-    assign RF_rd_data_in = (MCU_rf_mux) ? PC_out + 32'd4 : F_out;
+    assign RF_rd_data_in = (MCU_rfile_mux) ? PC_out + 32'd4 : F_out;
 
     assign ALU_in1 = (MCU_alu_mux1) ? PC_out : RF_rs1_data;
 
     assign ALU_in2 = (MCU_alu_mux2) ? RF_rs2_data : IE_out;
 
     assign F_out = (MCU_op_mux == 2'b1) ? DE_out:  
-                   (MCU_op_mux == 2'd2) ? IM_out: 
+                   (MCU_op_mux == 2'd2) ? IE_out: 
                    ALU_out;
 
 endmodule
-
-// DMem TCL Simulation Commands
-
-/*
-restart
-add_force {/ControlUnit/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
-
-
-*/

@@ -18,20 +18,20 @@ module IMem(
     reg [31:0] rom [0:`ROM_LENGTH_WORDS-1]; 
     
     // Load Program into Memory from Memory File
-    //initial begin
-    //$readmemh("main.mem", rom_words); 
-    //end
+    initial begin
+     $readmemh("imem.mem", rom); 
+    end
     
     // Manual Loading of Memory
-    initial begin
-        rom[0] <= 32'h00100093; //addi x1, x0, 1 
-        rom[1] <= 32'h00200113; //addi x2, x0, 2 
-        rom[2] <= 32'h002080b3; //loop: add x1, x1, x2 
-        rom[3] <= 32'hffdff06f; //j loop
-        rom[4] <= 32'h00001117; //auipc
-        rom[510] <= 32'h22222222;
-        rom[511] <= 32'h11111111;
-    end
+//    initial begin
+//        rom[0] <= 32'h00100093; //addi x1, x0, 1 
+//        rom[1] <= 32'h00200113; //addi x2, x0, 2 
+//        rom[2] <= 32'h002080b3; //loop: add x1, x1, x2 
+//        rom[3] <= 32'hffdff06f; //j loop
+//        rom[4] <= 32'h00001117; //auipc
+//        rom[510] <= 32'h22222222;
+//        rom[511] <= 32'h11111111;
+//    end
 
     // Address Translation divide by 4 
     wire [31:0] addr = (addr_in[`ROM_ADDR_BITS-1:0] >> 2);

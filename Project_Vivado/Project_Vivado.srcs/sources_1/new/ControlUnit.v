@@ -11,7 +11,7 @@ module ControlUnit(
     output reg pc_we,                     // PC write enable
     
     // IMem
-    output reg imem_rd,                 // IM read enable
+    output reg imem_rd,                   // IM read enable
     
     // regfile
     //input wire [31:0] rs1_data,
@@ -72,19 +72,15 @@ module ControlUnit(
      reg [0:2] state;
      reg [0:2] next_state;
      
+     reg done=0;
      
     //Combinational Logic
     always@(*) begin
 
         // default instruction loading
-        opcode <= instruction[6:0]; 
-        //rd <=  instruction[11:7];
-        //rs1 <= instruction[19:15];    
-        //rs2 <= instruction[24:20];    
+        opcode <= instruction[6:0];   
         funct3 <= instruction[14:12]; 
-        funct7 <= instruction[31:25];
-        //imm12 <= instruction[31:20];
-        //imm20 <= instruction[31:12];   
+        funct7 <= instruction[31:25];   
 
         // default State Machine Signals
         load <= 0;
@@ -102,18 +98,18 @@ module ControlUnit(
             `LUI: begin
                 // Loads the immediate value into the upper 20 bits of the 
                 // target register rd and sets the lower bits to 0
+                //done<=1;
                 op_mux <= 2'd2;
                 imm_op <= 3'd4;         // U-TYPE
             end
-            
+     
             `AUIPC: begin
                 // Forms a 32-bit offset from the 20-bit value by filling 
                 // the lower bits with zeros, adds this to pc_out, and stores
                 // the result in rd
                 alu_mux1 <= 1;
                 imm_op <=3'd4;          // U-TYPE
-                alu_op <= `ADD;
-                               
+                alu_op <= `ADD;                               
             end
             
             `JAL: begin                 // J-TYPE
@@ -188,9 +184,9 @@ module ControlUnit(
             `SYSTEM:begin
                 halt<=1;
             end
-            
             default: begin
-                $display("Invalid OPCODE");
+                //halt<=1;
+                $display("Invalid OPCODE MCU");
             end
         endcase
     end
@@ -213,7 +209,7 @@ module ControlUnit(
         
         case (state)
             // Instruction Fetch
-            `IF: begin                  // Move to instruction decode and execute stage for all instruction types
+            `IF: begin                          // Move to instruction decode and execute stage for all instruction types
                 imem_rd <= 1;
                 next_state <= `ID_EX;
             end
@@ -222,12 +218,12 @@ module ControlUnit(
                 if(!halt) begin
                     if (load | store)
                         next_state <= `MEM;
-                    else                    // No need for Memory stage
+                    else                        // No need for Memory stage
                         next_state <= `WB;
                 end
             end
             // Memory Read Write
-            `MEM: begin                 // WB and update PC after MEM
+            `MEM: begin                         // WB and update PC after MEM
                 if (load)  dmem_rd <= 1;
                 if (store)  dmem_we <= dmem_we_temp;
                 next_state <= `WB;
@@ -245,3 +241,24 @@ module ControlUnit(
     end
     
 endmodule
+
+
+// ControlUnit TCL Simulation Commands
+
+/*
+restart
+add_force {/ControlUnit/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
+run 1ns
+add_force {/ControlUnit/instruction} -radix hex {000022b7 0ns}
+add_force {/ControlUnit/rstn} -radix hex {0 0ns}
+run 1ns
+add_force {/ControlUnit/rstn} -radix hex {1 0ns}
+run 3ns
+add_force {/ControlUnit/instruction} -radix hex {0000a297 0ns}
+run 5ns
+
+000022b7 // LUI
+00000073 // HALT
+0000a297 // AUIPC
+
+*/
