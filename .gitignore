@@ -6,7 +6,6 @@
 #Exclude all
 #########
 *
-!/Documentation
 !.png
 !.pdf
 !.docx
