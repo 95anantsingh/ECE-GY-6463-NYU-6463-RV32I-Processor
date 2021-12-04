@@ -3,9 +3,9 @@
 `default_nettype none
 
 module BranComp(
+    input wire [2:0] bc_op,
     input wire [31:0] data_in1,
     input wire [31:0] data_in2,
-    input wire [2:0] bc_op,
     output reg bc_out
     );
     
