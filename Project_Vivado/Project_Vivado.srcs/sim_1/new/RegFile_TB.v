@@ -1,3 +1,23 @@
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 12/04/2021 02:11:11 PM
+// Design Name: 
+// Module Name: RegFile_TB
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 `timescale 1ns / 1ps
 
 module RegFile_TB(
@@ -13,7 +33,7 @@ module RegFile_TB(
     wire [31:0] rs1_data;          
     wire [31:0] rs2_data;
     
-    RegFiles DUT(.clk(clk), .we(we), .rd(rd),.rs1(rs1), .rs2(rs2),
+    RegFile DUT(.clk(clk), .we(we), .rd(rd),.rs1(rs1), .rs2(rs2),
                 .rd_data_in(rd_data_in),.rs1_data(rs1_data), .rs2_data(rs2_data));    
     
     initial begin: CLK_GEN
@@ -26,34 +46,46 @@ module RegFile_TB(
     end
     
     initial begin : TEST_PROCESS
-        #5;
-        rs1 <= 5'b01110;            //Read reg 14
-        rs2 <= 5'b10001;            //Read reg 17
-        we <=0;
-        rd <= 5'b11011;             //Write reg 27
-        rd_data_in <= 32'd5;
+    
+ //write to reg 5
+        rs1 <= 5'b00001;            
+        rs2 <= 5'b00010;            
+        we <=1;
+        rd <= 5'b00101;             
+        rd_data_in <= 32'h89ABCDEF;
        #10;
+       
+  //write to reg 6     
        we <=1;
+       rs1 <= 5'b00001;            
+       rs2 <= 5'b00010;            
+       rd <=5'b00110;  
+       rd_data_in <= 32'h01234567;
        #10;
-       rd_data_in <= 32'd73;
-       #10;
-       rd_data_in <= 32'd17;
-       rd <= 5'b01110;              //Reg 14
-       rs2 <= 5'b11011;             //Reg 27
-       #10;
-       rd <= 5'b10101;              //Reg 21
-       rd_data_in <=32'd12;
-       #10;
-       rs1 <= 5'b11011;             //Reg 27
-       rs2 <= 5'b10101;             //Reg 21 
-       #15;
-       rs1 <= 5'b11110;             //Reg 30
+
+//retrieve from reg 5 and 6
        we <=0;
-       rd <=5'b11110;               //Reg 30
+       rs1 <= 5'b00101;            
+       rs2 <= 5'b00110;            
+       rd <=5'b00001;  
+       rd_data_in <= 32'd0;
+       if((rs1_data!=32'h01234567)&(rs2_data!=32'h89ABCDEF)) $fatal("Read Operation failed");
        #10;
-       we <=1;  
+       
+       
+//writing is not possible to hardwired reg 0
+        we<=1;
+       rs1 <= 5'b00000;            
+       rs2 <= 5'b00000;            
+       rd <=5'b00000;  //Reg0
+       rd_data_in <= 32'h01234567;
+       if((rs1_data!=32'h00000000)&(rs2_data!=32'h00000000)) $fatal("Register 0 is special read-only register, we cannot write to it even if write enable is high");
        #10
-       $finish;
+  
+        $display("All tests passed");
+        $finish;
+     
+
     end
 
 endmodule
