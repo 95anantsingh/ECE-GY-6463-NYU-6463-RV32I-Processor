@@ -6,23 +6,31 @@ module Processor(
     input wire rstn
     );
     
+    
+    // Program Counter
     wire PC_we;
     wire [31:0] PC_in;
     wire [32:0] PC_out;
     PC ProgramCounter(.clk(clk),.rstn(rstn),.we(PC_we),.data_in(PC_in),.data_out(PC_out));
     
+    
+    // ALU
     wire [31:0] ALU_in1;
     wire [31:0] ALU_in2;
-    wire [3:0]  ALU_op;
+    wire [3:0]  ALU_opc;
     wire [31:0] ALU_out;
-    ALU ArithmaticLogicUnit(.operand1(ALU_in1), .operand2(ALU_in2), .operation(ALU_op) ,.ALUresult(ALU_out));
+    ALU ArithmaticLogicUnit(.operand1(ALU_in1), .operand2(ALU_in2), .operation(ALU_opc) ,.ALUresult(ALU_out));
 
+    
+    // Branch Comparator
     wire [31:0] BC_in1;
     wire [31:0] BC_in2;
-    wire [2:0] BC_op;
+    wire [2:0] BC_opc;
     wire BC_out;
-    BranComp BranchComparator(.data_in1(BC_in1), .data_in2(BC_in2), .bc_op(BC_op), .bc_out(BC_out));  
-                  
+    BranComp BranchComparator(.data_in1(BC_in1), .data_in2(BC_in2), .bc_op(BC_opc), .bc_out(BC_out));  
+    
+    
+    // Data Memory              
     wire DM_rd;               
     wire [3:0] DM_we;         
     wire [31:0] DM_addr_in;   
@@ -31,11 +39,14 @@ module Processor(
     DMem DataMemory(.clk(clk), .rd(DM_rd), .we(DM_we), .addr_in(DM_addr_in), .data_in(DM_in), 
                     .data_out(DM_out));
     
+    // Instruction Memory
     wire IM_rd;                        
     wire [31:0] IM_addr_in;   
     wire [31:0] IM_out;   
     IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .data_out(IM_out));
     
+    
+    // Register File
     wire RF_we;               
     wire [4:0] RF_rd;          
     wire [4:0] RF_rs1;         
@@ -46,7 +57,13 @@ module Processor(
     RegFile RegisterFile(.clk(clk), .rstn(rstn), .we(RF_we), .rd(RF_rd), .rs1(RF_rs1), .rs2(RF_rs2),          
                          .rd_data_in(RF_rd_data_in), .rs1_data(RF_rs1_data), .rs2_data(RF_rs2_data));  
     
-    wire [31:0] IE_out;
+    // Immediate Extender
+    wire [1:0] IE_opc;   
+    wire [31:0] IE_instr;
+    wire [31:0] IE_out;  
+                    
+    
+    // Data Extender
     wire [31:0] DE_out;
     
     wire pc_mux;
