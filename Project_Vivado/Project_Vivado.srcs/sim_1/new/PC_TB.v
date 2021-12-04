@@ -10,7 +10,7 @@ module PC_TB(
     wire [31:0] pc;
 
     
-    PC DUT(
+    PCnt DUT(
     .clk(clk), .rst(rst), .we(we), .next_pc(next_pc), .pc(pc)
     );    
     
