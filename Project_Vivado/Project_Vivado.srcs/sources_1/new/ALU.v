@@ -1,34 +1,35 @@
 `timescale 1ns / 1ps
+`include "defines.vh"
 `default_nettype none
 
 module ALU(
     input wire [31:0] operand1,                 // First operand
     input wire [31:0] operand2,                 // Second operand
-    input wire [3:0] operation,                 // The operation to be performed on the operands
-    output reg [31:0] ALUresult                 // ALU Output
+    input wire [3:0] operation,                   // The operation to be performed on the operands
+    output reg [31:0] ALUresult
     );
     
    always @(*) begin
         case (operation)
-            4'd0:       //ADD
+            `ADD: 
                 ALUresult <= operand1 + operand2;
-            4'd1:       //SUB
+            `SUB:
                 ALUresult <= operand1 - operand2;
-            4'd2:       //SLL
+            `SLL:
                 ALUresult <= operand1 << operand2[4:0];
-            4'd3:       //SLT
+            `SLT:
                 ALUresult <= ($signed(operand1) < $signed(operand2)) ? 1 :0;
-            4'd4:       //SLTU
+            `SLTU:
                 ALUresult <= (operand1 < operand2) ? 1 :0;
-            4'd5:       //XOR
+            `XOR:
                 ALUresult <= operand1 ^ operand2;
-            4'd6:       //SRL
+            `SRL:
                 ALUresult <= operand1 >> operand2[4:0];
-            4'd7:       //SRA
+            `SRA:
                 ALUresult <= $signed(operand1) >>> operand2[4:0];
-            4'd8:       //OR
+            `OR:
                 ALUresult <= operand1 | operand2;
-            4'd9:       //AND
+            `AND:
                 ALUresult <= operand1 & operand2;
             default:    
                 ALUresult <= ALUresult;

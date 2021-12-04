@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "defines.vh"
 `default_nettype none
 
 module BranComp(
@@ -10,17 +11,17 @@ module BranComp(
     
     always@(*) begin
         case(bc_op)
-            3'd0:   // BEQ
+            `BEQ:
                 bc_out <= (data_in1==data_in2) ? 1:0;
-            3'd1:   // BNE
+            `BNE:
                 bc_out <= (data_in1==data_in2) ? 0:1;
-            3'd2:   // BLT
-                bc_out <= ($signed(data_in1) < $signed(data_in2)) ? 1:0;
-            3'd3:   // BGE
-                bc_out <= ($signed(data_in1) < $signed(data_in2)) ? 0:1;
-            3'd4:   // BLTU
+            `BLT:
+                bc_out <= ($signed(data_in1) < $signed(data_in2)) ? 1 :0;
+            `BGE:
+                bc_out <= ($signed(data_in1) < $signed(data_in2)) ? 0 :1;
+            `BLTU:
                 bc_out <= (data_in1 < data_in2)? 1:0;
-            3'd5:   // BGEU
+            `BGEU:
                 bc_out <= (data_in1 < data_in2)? 0:1;
         endcase
     end

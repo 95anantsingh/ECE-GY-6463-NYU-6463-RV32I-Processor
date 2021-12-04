@@ -48,43 +48,24 @@
 `define SH  3'b001 
 `define SW  3'b010 
 
-// IMM
-`define ADDI    3'b000 
-`define SLTI    3'b010 
-`define SLTIU   3'b011 
-`define XORI    3'b100 
-`define ORI     3'b110 
-`define ANDI    3'b111 
-`define SLLI    3'b001 
-`define SRLI_SRAI  3'b101 
-
-// R_ALU
-`define ADD_SUB  3'b000 
-`define SLL      3'b001 
-`define SLT      3'b010 
-`define SLTU     3'b011 
-`define XOR      3'b100 
-`define SRL_SRA  3'b101 
-`define OR       3'b110 
-`define AND      3'b111 
+// IMM and ALU
+`define ADD     4'b0000
+`define SUB     4'b1000 
+`define SLL     4'b0001 
+`define SLT     4'b0010 
+`define SLTU    4'b0011 
+`define XOR     4'b0100 
+`define SRL     4'b0101
+`define SRA     4'b1101 
+`define OR       4'b0110 
+`define AND     4'b0111 
 
 // SYSTEM
 `define ECALL_EBREAK  3'b000 
 
-// ALU_Operations
-`define ALU_ADD   4'd0 
-`define ALU_SUB   4'd1 
-`define ALU_SLL   4'd2 
-`define ALU_SLT   4'd3 
-`define ALU_SLTU  4'd4 
-`define ALU_XOR   4'd5 
-`define ALU_SRL   4'd6 
-`define ALU_SRA   4'd7 
-`define ALU_OR    4'd8 
-`define ALU_AND   4'd9 
-
-// BR_OPERATIONS
-`define BR_EQ  0 	
-`define BR_NE  1 
-`define BR_LT  2 
-`define BR_GE  3 
+// STATES
+`define IF              3'd0        // Instruction Fetch
+`define ID_EX        3'd1        // Instruction Decode and Execute 
+`define MEM         3'd2        // Data Memory
+`define WB           3'd3        // Write back and Update PC
+`define HALT        3'd4        // HALT state
