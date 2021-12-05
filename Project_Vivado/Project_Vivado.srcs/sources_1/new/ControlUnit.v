@@ -469,9 +469,13 @@ module ControlUnit(
                 next_state <= `WB;
 
             end
+<<<<<<< Updated upstream
 
             // Write Back
 
+=======
+            // Write Back
+>>>>>>> Stashed changes
             `WB: begin                  // Always fetch instruction after PC is updated
 
                 pc_we <= 1;
@@ -539,5 +543,8 @@ run 5ns
 0000a297 // AUIPC
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 */

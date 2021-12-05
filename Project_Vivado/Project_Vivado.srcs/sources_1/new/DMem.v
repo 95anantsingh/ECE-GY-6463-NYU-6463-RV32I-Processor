@@ -77,6 +77,7 @@ module DMem(
     // Manual Loading of Memory
 
     initial begin
+<<<<<<< Updated upstream
 
         ram[0]<=32'h0;
 
@@ -90,6 +91,14 @@ module DMem(
 
         ram[1023] <= 32'h11111111;
 
+=======
+//        ram[0]<=32'h0;
+//        ram[1]<=32'h1;
+//        ram[2]<=32'h2;
+//        ram[3]<=32'h3;
+//        ram[1022] <= 32'h22222222;
+//        ram[1023] <= 32'h11111111;
+>>>>>>> Stashed changes
         
 
         // ROM
