@@ -100,61 +100,63 @@ module ControlUnit_TB(
         if(rfile_mux != 1) $fatal("Expected RF destination select line not received for JALR");
         #20;
         
-//        //Branch instructions
-//        instruction <= 32'h;        //beq
-//        #10;
-//        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
-//        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
-//        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
-//        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
-//        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
-//        if(bc_op != 3'd0) $fatal ("Expected branch comparator opcode not received for BEQ");
-//        #20; 
-//        instruction <= 32'h;        //bne
-//        #10;
-//        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
-//        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
-//        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
-//        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
-//        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
-//        if(bc_op != 3'd1) $fatal ("Expected branch comparator opcode not received for BNE");
-//        #20; 
-//        instruction <= 32'h;        //blt
-//        #10;
-//        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
-//        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
-//        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
-//        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
-//        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
-//        if(bc_op != 3'd4) $fatal ("Expected branch comparator opcode not received for BLT");
-//        #20; 
-//        instruction <= 32'h;        //bge
-//        #10;
-//        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
-//        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
-//        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
-//        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
-//        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
-//        if(bc_op != 3'd5) $fatal ("Expected branch comparator opcode not received for BEQ");
-//        #20; 
-//        instruction <= 32'h;        //bltu
-//        #10;
-//        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
-//        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
-//        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
-//        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
-//        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
-//        if(bc_op != 3'd6) $fatal ("Expected branch comparator opcode not received for BEQ");
-//        #20; 
-//        instruction <= 32'h;        //bgeu
-//        #10;
-//        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
-//        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
-//        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
-//        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
-//        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
-//        if(bc_op != 3'd7) $fatal ("Expected branch comparator opcode not received for BEQ");
-//        #20; 
+        //imm[12|10:5] rs2 rs1 000 imm[4:1|11] 1100011
+        
+        //Branch instructions
+        instruction <= 32'b00000000000100010000011101100011;        //beq
+        #10;
+        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
+        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
+        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
+        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
+        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
+        if(bc_op != 3'd0) $fatal ("Expected branch comparator opcode not received for BEQ");
+        #20; 
+        instruction <= 32'b00000000000100010001011101100011;        //bne
+        #10;
+        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
+        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
+        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
+        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
+        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
+        if(bc_op != 3'd1) $fatal ("Expected branch comparator opcode not received for BNE");
+        #20; 
+        instruction <= 32'b00000000000100010100011101100011;        //blt
+        #10;
+        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
+        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
+        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
+        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
+        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
+        if(bc_op != 3'd4) $fatal ("Expected branch comparator opcode not received for BLT");
+        #20; 
+        instruction <= 32'b00000000000100010101011101100011;        //bge
+        #10;
+        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
+        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
+        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
+        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
+        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
+        if(bc_op != 3'd5) $fatal ("Expected branch comparator opcode not received for BEQ");
+        #20; 
+        instruction <= 32'b00000000000100010110011101100011;        //bltu
+        #10;
+        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
+        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
+        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
+        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
+        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
+        if(bc_op != 3'd6) $fatal ("Expected branch comparator opcode not received for BEQ");
+        #20; 
+        instruction <= 32'b00000000000100010111011101100011;        //bgeu
+        #10;
+        if(imm_op !=3'd2) $fatal("Expected immediate extension opcode not received for Branch");
+        if(pc_mux !=0) $fatal("Expected PC update select line not received for Branch");
+        if(alu_mux1 != 1) $fatal("Expected ALU input data1 not received for Branch");
+        if(alu_mux2 != 0) $fatal("Expected ALU input data2 not received for Branch");
+        if(alu_op != 4'd0) $fatal("Expected ALU opcode not received for Branch");
+        if(bc_op != 3'd7) $fatal ("Expected branch comparator opcode not received for BEQ");
+        #20; 
         
          //Load instructions
         instruction <= 32'h02830283;        //lb x5, 40(x6)
@@ -414,6 +416,23 @@ module ControlUnit_TB(
         if(alu_mux1 != 0) $fatal("Expected ALU input data1 not received for R-type");
         if(alu_mux2 != 1) $fatal("Expected ALU input data2 not received for R-type");
         if(alu_op != 4'd7) $fatal("Expected ALU opcode not received for AND");
+        #20;
+        
+        instruction <= 32'h00000073;        //ECALL
+        #20;
+        if(imem_rd !=0) $fatal("Expected IMem read enable not received for Halt instruction");
+        if(pc_we !=0) $fatal("Expected PC write enable not received for Halt instruction");
+        if(rf_we != 0) $fatal("Expected RF write enable not received for Halt instruction");
+        if(dmem_rd != 0) $fatal("Expected DMem read enable not received for Halt instruction");
+        if(dmem_we != 4'd0) $fatal("Expected DMem write enable not received for Halt instruction");
+        #20;
+        instruction <= 32'h00100073;        //EBREAK
+        #20;
+        if(imem_rd !=0) $fatal("Expected IMem read enable not received for Halt instruction");
+        if(pc_we !=0) $fatal("Expected PC write enable not received for Halt instruction");
+        if(rf_we != 0) $fatal("Expected RF write enable not received for Halt instruction");
+        if(dmem_rd != 0) $fatal("Expected DMem read enable not received for Halt instruction");
+        if(dmem_we != 4'd0) $fatal("Expected DMem write enable not received for Halt instruction");
         #20;
         
         $display("All test cases passed");
