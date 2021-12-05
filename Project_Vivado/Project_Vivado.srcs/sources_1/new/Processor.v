@@ -117,7 +117,7 @@ add_force {/Processor/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
 add_force {/Processor/rstn} -radix hex {0 0ns}
 run 1ns
 add_force {/Processor/rstn} -radix hex {1 0ns}
-run 20ns
+run 25ns
 
 000202b7 // LUI x5, 32
 0000a317 // AUIPC x6, 10
