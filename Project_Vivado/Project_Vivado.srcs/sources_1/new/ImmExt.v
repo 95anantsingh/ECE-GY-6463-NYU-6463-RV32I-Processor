@@ -47,9 +47,9 @@ output wire [31:0] ext_imm
                     imm <= {20'd0,imms[11:0]};
             end
             3'd4: begin     //U-TYPE
-                if(immu[31==1])         
-                    imm <= {immu[31:12], 12'b111111111111};
-                else
+//                if(immu[31]==1)         
+//                    imm <= {immu[31:12], 12'b111111111111};
+//                else
                     imm <= {immu[31:12], 12'd0};
             end
         endcase

@@ -20,7 +20,7 @@ module ALU(
             `SLT:
                 ALUresult <= ($signed(operand1) < $signed(operand2)) ? 1 :0;
             `SLTU:
-                ALUresult <= (operand1 < operand2) ? 1 :0;
+                ALUresult <= (operand1 < operand2) ? 1 : 0;
             `XOR:
                 ALUresult <= operand1 ^ operand2;
             `SRL:
