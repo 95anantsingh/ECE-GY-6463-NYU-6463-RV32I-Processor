@@ -84,7 +84,6 @@ module ControlUnit(
         // default State Machine Signals
         load <= 0;
         store <= 0;
-        halt <= 0;
         
         // default Select Lines
         pc_mux <= 0;
@@ -203,7 +202,7 @@ module ControlUnit(
     end
     
     // State machine
-    always @(state) begin
+    always @(state,halt) begin
         imem_rd <= 0;
         pc_we <= 0;
         rf_we <= 0;
@@ -218,7 +217,8 @@ module ControlUnit(
             end
             // Instruction Decode and Execution
             `ID_EX: begin
-                if(!halt) begin
+                if(halt) next_state <= `HALT;
+                else begin
                     if (load | store)
                         next_state <= `MEM;
                     else                        // No need for Memory stage

@@ -35,7 +35,7 @@ module Processor(
     
     
     // Immediate Extender
-    wire [1:0] IE_opc;   
+    wire [2:0] IE_opc;   
     wire [31:0] IE_instr;
     wire [31:0] IE_out; 
     ImmExt ImmediateExtender(.opcode(IE_opc),.instr(IE_instr),.ext_imm(IE_out));
