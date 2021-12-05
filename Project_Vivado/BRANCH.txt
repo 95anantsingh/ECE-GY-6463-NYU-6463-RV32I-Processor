@@ -1,0 +1,38 @@
+
+/*
+ * Standalone assembly language program for NYU-6463-RV32I processor
+ * The label 'reset handler' will be called upon startup.
+*/
+
+.global reset_handler
+.type reset_handler,@function
+
+
+reset_handler:
+lui x1, 0xF2F2F
+lui x2, 0x11111
+
+beq x1, x2, loop
+bne x1, x1, loop
+blt x2, x1, loop
+bltu x1, x2, loop
+bge x1, x2, loop
+bgeu x2, x1, loop
+
+loop:ecall
+
+
+
+/*
+
+f2f2f0b7
+11111137
+00208c63
+00109a63
+00114863
+0020e663
+0020d463
+00117263
+00000073
+
+*/

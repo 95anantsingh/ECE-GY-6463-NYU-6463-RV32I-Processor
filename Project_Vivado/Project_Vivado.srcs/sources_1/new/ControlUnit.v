@@ -66,6 +66,7 @@ module ControlUnit(
     reg load;
     reg store;
     reg branch;
+    reg fence;
     reg [3:0] dmem_we_temp;
     reg halt;
     
@@ -86,6 +87,7 @@ module ControlUnit(
         load <= 0;
         store <= 0;
         branch <=0;
+        fence <=0;
         
         // default Select Lines
         pc_mux <= 0;
@@ -177,8 +179,7 @@ module ControlUnit(
             end
             
             `FENCE:begin
-                //alu_mux1, alu_mux2 ???
-                alu_op <= `ADD;
+                fence <= 1;
             end
             
             `SYSTEM:begin
@@ -198,6 +199,8 @@ module ControlUnit(
             state <= `IF;
             load <= 0;
             store <= 0;
+            branch <=0;
+            fence <=0;
             halt <= 0;
         end
         else
@@ -205,7 +208,7 @@ module ControlUnit(
     end
     
     // State machine
-    always @(state,halt,load,store,branch) begin
+    always @(state,halt,load,store,branch,fence) begin
         imem_rd <= 0;
         pc_we <= 0;
         rf_we <= 0;
@@ -221,12 +224,10 @@ module ControlUnit(
             // Instruction Decode and Execution
             `ID_EX: begin
                 if(halt) next_state <= `HALT;
-                else begin
-                    if (load | store)
-                        next_state <= `MEM;
-                    else                        // No need for Memory stage
-                        next_state <= `WB;
-                end
+                else if (load | store)
+                    next_state <= `MEM;
+                else                        // No need for Memory stage
+                    next_state <= `WB;
             end
             // Memory Read Write
             `MEM: begin                         // WB and update PC after MEM
@@ -237,7 +238,7 @@ module ControlUnit(
             // Write Back
             `WB: begin                  // Always fetch instruction after PC is updated
                 pc_we <= 1;
-                if (!(store | branch))  begin
+                if (!(store | branch | fence))  begin
                     rf_we <=1;
                 end
                 next_state <= `IF;
