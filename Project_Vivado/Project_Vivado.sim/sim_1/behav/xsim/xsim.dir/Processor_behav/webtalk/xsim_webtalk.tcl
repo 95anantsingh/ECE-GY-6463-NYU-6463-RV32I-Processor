@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.sim/sim_1/behav/xsim/xsim.dir/Processor_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sun Dec  5 17:08:32 2021" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Sun Dec  5 18:55:15 2021" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2018.3 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2405991" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "WIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "c8283774-c1b7-4b40-9a68-2935c21f43a8" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "762b0ab58d4b47aea160a39d4416f4c3" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "85" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "97" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz" -context "user_environment"
@@ -33,10 +33,10 @@ webtalk_add_data -client xsim -key Debug -value "typical" -context "xsim\\comman
 webtalk_add_data -client xsim -key Simulation_Image_Code -value "112 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Simulation_Image_Data -value "7 KB" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Nets -value "0" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Total_Processes -value "72" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Total_Processes -value "73" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Total_Instances -value "11" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Xilinx_HDL_Libraries_Used -value "secureip unimacro_ver unisims_ver " -context "xsim\\usage"
 webtalk_add_data -client xsim -key Compiler_Time -value "0.87_sec" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Compiler_Memory -value "44540_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 3106285746 -regid "" -xml C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.sim/sim_1/behav/xsim/xsim.dir/Processor_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.sim/sim_1/behav/xsim/xsim.dir/Processor_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.sim/sim_1/behav/xsim/xsim.dir/Processor_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_add_data -client xsim -key Compiler_Memory -value "44136_KB" -context "xsim\\usage"
+webtalk_transmit -clientid 2635816822 -regid "" -xml C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.sim/sim_1/behav/xsim/xsim.dir/Processor_behav/webtalk/usage_statistics_ext_xsim.xml -html C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.sim/sim_1/behav/xsim/xsim.dir/Processor_behav/webtalk/usage_statistics_ext_xsim.html -wdm C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.sim/sim_1/behav/xsim/xsim.dir/Processor_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate
