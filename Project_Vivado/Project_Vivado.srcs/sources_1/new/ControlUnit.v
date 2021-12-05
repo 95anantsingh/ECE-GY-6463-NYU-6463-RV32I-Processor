@@ -205,7 +205,7 @@ module ControlUnit(
     end
     
     // State machine
-    always @(state,halt) begin
+    always @(state,halt,load,store,branch) begin
         imem_rd <= 0;
         pc_we <= 0;
         rf_we <= 0;
