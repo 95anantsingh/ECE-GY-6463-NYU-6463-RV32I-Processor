@@ -7,11 +7,13 @@ module Processor(
     output wire out
     );
     
+    
     // Program Counter
     wire PC_we;
     wire [31:0] PC_in;
     wire [31:0] PC_out;
     PCnt ProgramCounter(.clk(clk),.rstn(rstn),.we(PC_we),.data_in(PC_in),.data_out(PC_out));
+    
     
     // Instruction Memory
     wire IM_rd;                        
@@ -19,6 +21,7 @@ module Processor(
     wire [31:0] IM_out;   
     IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .instr_out(IM_out));
     assign IM_addr_in = PC_out;
+    
     
     // Register File
     wire RF_we;               
@@ -106,7 +109,8 @@ module Processor(
     assign F_out = (MCU_op_mux == 2'b1) ? DE_out:  
                    (MCU_op_mux == 2'd2) ? IE_out: 
                    ALU_out;
-                   
+    
+    // Output Mandate to Synthesize               
     assign out = MCU_pc_mux;
 
 endmodule

@@ -5,7 +5,7 @@
 module ALU(
     input wire [31:0] operand1,                 // First operand
     input wire [31:0] operand2,                 // Second operand
-    input wire [3:0] operation,                   // The operation to be performed on the operands
+    input wire [3:0] operation,                 // The operation to be performed on the operands
     output reg [31:0] ALUresult
     );
     
@@ -18,7 +18,7 @@ module ALU(
             `SLL:
                 ALUresult <= operand1 << operand2[4:0];
             `SLT:
-                ALUresult <= ($signed(operand1) < $signed(operand2)) ? 1 :0;
+                ALUresult <= ($signed(operand1) < $signed(operand2)) ? 1 : 0;
             `SLTU:
                 ALUresult <= (operand1 < operand2) ? 1 : 0;
             `XOR:

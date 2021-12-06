@@ -1,5 +1,3 @@
-
-
 `default_nettype none
 
 // MCU Instruction Defines
@@ -18,13 +16,6 @@
 `define FENCE   7'b0001111 
 `define SYSTEM  7'b1110011 
 
-//    `define REGS  0 
-//    `define RS2IMM_RS1  1 
-//    `define RS2IMM_RS1PC  2 
-
-
-//  I_JARL
-//    `define FUNCT3_JARL  3'b000 
 
 // FUNCT3 OPCODE
 
@@ -64,8 +55,8 @@
 `define ECALL_EBREAK  3'b000 
 
 // STATES
-`define IF      3'd0        // Instruction Fetch
-`define ID_EX   3'd1        // Instruction Decode and Execute 
-`define MEM     3'd2        // Data Memory
-`define WB      3'd3        // Write back and Update PC
-`define HALT    3'd4        // HALT state
+`define IF      3'd0     // Instruction Fetch
+`define ID_EX   3'd1     // Instruction Decode and Execute 
+`define MEM     3'd2     // Data Memory
+`define WB      3'd3     // Write back and Update PC
+`define HALT    3'd4     // HALT state

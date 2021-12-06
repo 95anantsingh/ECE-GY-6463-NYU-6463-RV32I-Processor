@@ -7,23 +7,15 @@ module ControlUnit(
     input wire [31:0] instruction,
  
     // pc
-    //input wire [31:0] pc_out,           // Output from PC
     output reg pc_we,                     // PC write enable
 
     // IMem
     output reg imem_rd,                   // IM read enable
 
     // regfile
-    //input wire [31:0] rs1_data,
-    //input wire [31:0] rs2_data,
     output reg rf_we,
-    //output reg [31:0] rd_data_in,
-    //output reg [4:0] rd_addr,
-    //output reg [4:0] rs1_addr,
-    //output reg [4:0] rs2_addr,        
-
+    
     // ImmEx
-    // output reg [31:0] imm_ex,
     output reg [2:0] imm_op,    
 
     //DataExt
@@ -34,7 +26,6 @@ module ControlUnit(
     output reg [2:0] bc_op,
     
     // ALU
-    //input wire [31:0] alu_out,
     output reg [3:0] alu_op,
     
     // Dmem
@@ -53,14 +44,8 @@ module ControlUnit(
     // Instruction Variables
     
     reg [6:0] opcode;
-    //reg [4:0] rd;
-    //reg [4:0] rs1;
-    //reg [4:0] rs2;
     reg [2:0] funct3;
     reg [6:0] funct7;
-    
-    //reg [11:0] imm12;
-    //reg [31:12] imm20;
     
     // State Machine Signals
     reg load;
