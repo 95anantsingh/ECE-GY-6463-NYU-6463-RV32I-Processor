@@ -9,24 +9,21 @@ module Processor(
     
     
     // Program Counter
-    (* keep = "true" *)
     wire PC_we;
     wire [31:0] PC_in;
     wire [31:0] PC_out;
-     PCnt ProgramCounter(.clk(clk),.rstn(rstn),.we(PC_we),.data_in(PC_in),.data_out(PC_out));
+    PCnt ProgramCounter(.clk(clk),.rstn(rstn),.we(PC_we),.data_in(PC_in),.data_out(PC_out));
     
     
     // Instruction Memory
-    (* keep = "true" *)
     wire IM_rd;                        
     wire [31:0] IM_addr_in;   
     wire [31:0] IM_out;   
-    IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .instr_out(IM_out));
     assign IM_addr_in = PC_out;
-    
+    IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .instr_out(IM_out));
+
     
     // Register File
-   (* keep = "true" *)
     wire RF_we;               
     wire [4:0] RF_rd;          
     wire [4:0] RF_rs1;         
@@ -34,35 +31,32 @@ module Processor(
     wire [31:0] RF_rd_data_in; 
     wire [31:0] RF_rs1_data;
     wire [31:0] RF_rs2_data;
-  RegFile RegisterFile(.clk(clk), .rstn(rstn), .we(RF_we), .rd(RF_rd), .rs1(RF_rs1), .rs2(RF_rs2),          
-                         .rd_data_in(RF_rd_data_in), .rs1_data(RF_rs1_data), .rs2_data(RF_rs2_data));  
     assign RF_rd = IM_out[11:7];
     assign RF_rs1 = IM_out[19:15];
     assign RF_rs2 = IM_out[24:20];
+    RegFile RegisterFile(.clk(clk), .rstn(rstn), .we(RF_we), .rd(RF_rd), .rs1(RF_rs1), .rs2(RF_rs2),          
+                         .rd_data_in(RF_rd_data_in), .rs1_data(RF_rs1_data), .rs2_data(RF_rs2_data));  
     
     
     // Immediate Extender
-    (* keep = "true" *)
     wire [2:0] IE_opc;   
     wire [31:0] IE_instr;
     wire [31:0] IE_out; 
-    ImmExt ImmediateExtender(.opcode(IE_opc),.instr(IE_instr),.ext_imm(IE_out));
     assign IE_instr = IM_out;
+    ImmExt ImmediateExtender(.opcode(IE_opc),.instr(IE_instr),.ext_imm(IE_out));
     
     
     // Branch Comparator
-   (* keep = "true" *)
     wire [2:0] BC_opc;
     wire [31:0] BC_in1;
     wire [31:0] BC_in2;
-    (*dont_touch="{true}"*) wire BC_out;
-    BranComp BranchComparator(.bc_op(BC_opc), .data_in1(BC_in1), .data_in2(BC_in2), .bc_out(BC_out));
+    wire BC_out;
     assign BC_in1 = RF_rs1_data;
     assign BC_in2 = RF_rs2_data;
+    BranComp BranchComparator(.bc_op(BC_opc), .data_in1(BC_in1), .data_in2(BC_in2), .bc_out(BC_out));
     
     
     // ALU
-    (* keep = "true" *)
     wire [31:0] ALU_in1;
     wire [31:0] ALU_in2;
     wire [3:0]  ALU_opc;
@@ -70,30 +64,28 @@ module Processor(
     ALU ArithmaticLogicUnit(.operand1(ALU_in1), .operand2(ALU_in2), .operation(ALU_opc) ,.ALUresult(ALU_out));  
     
     
-    // Data Memory
-    (* keep = "true" *)              
+    // Data Memory              
     wire DM_rd;               
     wire [3:0] DM_we;         
     wire [31:0] DM_addr_in;   
     wire [31:0] DM_in;   
-    (*dont_touch="{true}"*) wire [31:0] DM_out;   
+    wire [31:0] DM_out;   
+    assign DM_addr_in = ALU_out;
+    assign DM_in = RF_rs2_data;
     DMem DataMemory(.clk(clk), .rd(DM_rd), .we(DM_we), .addr_in(DM_addr_in), .data_in(DM_in), 
                     .data_out(DM_out)); 
-    assign DM_addr_in = ALU_out;
-    assign DM_in = RF_rs2_data;  
+    
     
     
     // Data Extender
-    (* keep = "true" *)
     wire [2:0] DE_opc;
     wire [31:0] DE_in;
-    (*dont_touch="{true}"*) wire [31:0] DE_out; 
-    DataExt DataExtender(.opcode(DE_opc), .data(DE_in), .dout(DE_out));
+    wire [31:0] DE_out; 
     assign DE_in = DM_out;
+    DataExt DataExtender(.opcode(DE_opc), .data(DE_in), .dout(DE_out));
     
    
-    // Control Unit 
-    (* keep = "true" *)  
+    // Control Unit   
     wire MCU_pc_mux;
     wire MCU_rfile_mux;
     wire MCU_alu_mux1; 
@@ -120,8 +112,8 @@ module Processor(
                    ALU_out;
     
     // Output Mandate to Synthesize               
-    assign out = DM_out[0];
-
+    assign out = MCU_pc_mux;
+    
 endmodule
 
 // Processor TCL Simulation Commands
@@ -133,7 +125,7 @@ add_force {/Processor/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
 add_force {/Processor/rstn} -radix hex {0 0ns}
 run 1ns
 add_force {/Processor/rstn} -radix hex {1 0ns}
-run 45ns
+run 145ns
 
 000202b7 // LUI x5, 32
 0000a317 // AUIPC x6, 10
