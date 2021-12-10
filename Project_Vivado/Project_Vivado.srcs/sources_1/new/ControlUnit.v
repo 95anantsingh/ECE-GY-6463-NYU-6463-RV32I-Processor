@@ -82,6 +82,7 @@ module ControlUnit(
         store <= 0;
         branch <=0;
         fence <=0;
+        halt <=0;
         
         // default Select Lines
         pc_mux <= 0;
@@ -181,7 +182,7 @@ module ControlUnit(
             end
             default: begin
                 //halt<=1;
-                $display("Invalid OPCODE MCU");
+                //$display("Invalid OPCODE MCU");
             end
         endcase
     end

@@ -19,7 +19,7 @@ module IMem(
     
     // Load Program into Memory from Memory File
     initial begin
-     $readmemh("imem.mem", rom); 
+        $readmemh("imem.mem", rom); 
     end
     
     // Manual Loading of Memory

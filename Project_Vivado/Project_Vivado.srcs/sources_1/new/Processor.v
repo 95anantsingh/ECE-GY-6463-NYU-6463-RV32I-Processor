@@ -133,15 +133,6 @@ add_force {/Processor/clk} -radix hex {1 0ns} {0 500ps} -repeat_every 1000ps
 add_force {/Processor/rstn} -radix hex {0 0ns}
 run 1ns
 add_force {/Processor/rstn} -radix hex {1 0ns}
-run 45ns
-
-000202b7 // LUI x5, 32
-0000a317 // AUIPC x6, 10
-0100016F // JAL x2, 8 --> Jump to LUI (PC=PC+8)
-00000073 // HALT
-000022b7 // LUI x5, 32
-00010067 // JALR x0, 0(x2) Jump to Halt
-
-
+run 100ns
 
 */

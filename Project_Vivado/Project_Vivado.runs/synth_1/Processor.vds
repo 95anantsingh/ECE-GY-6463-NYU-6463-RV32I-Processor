@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Dec  9 21:00:25 2021
-# Process ID: 11632
+# Start of session at: Fri Dec 10 07:17:26 2021
+# Process ID: 4864
 # Current directory: C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.runs/synth_1
 # Command line: vivado.exe -log Processor.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Processor.tcl
 # Log file: C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.runs/synth_1/Processor.vds
@@ -15,13 +15,23 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2328 
+INFO: Helper process launched with PID 10416 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 451.766 ; gain = 96.738
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 451.930 ; gain = 96.844
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Processor' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:4]
-INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:12]
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "{true}" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:53]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:13]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:21]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:30]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:46]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:55]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "{true}" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:58]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:66]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:75]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "{true}" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:79]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:88]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "{true}" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:90]
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:97]
 INFO: [Synth 8-6157] synthesizing module 'PCnt' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/PCnt.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'PCnt' (1#1) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/PCnt.v:6]
 INFO: [Synth 8-6157] synthesizing module 'IMem' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/IMem.v:10]
@@ -44,17 +54,17 @@ Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation 
 	2: Unable to determine number of words or word size in RAM. 
 	3: No valid read/write found for RAM. 
 RAM dissolved into registers
-WARNING: [Synth 8-4767] Trying to implement RAM 'DMrom_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+WARNING: [Synth 8-4767] Trying to implement RAM 'rom_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: Write port has constant address. 
 	2: No valid read/write found for RAM. 
-RAM "DMrom_reg" dissolved into registers
+RAM "rom_reg" dissolved into registers
 INFO: [Synth 8-6155] done synthesizing module 'DMem' (7#1) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/DMem.v:21]
 INFO: [Synth 8-6157] synthesizing module 'DataExt' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/DataExt.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'DataExt' (8#1) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/DataExt.v:5]
 INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:4]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:152]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:212]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:153]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:213]
 INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (9#1) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'Processor' (10#1) [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/Processor.v:4]
 WARNING: [Synth 8-3331] design ControlUnit has unconnected port instruction[31]
@@ -126,7 +136,7 @@ WARNING: [Synth 8-3331] design IMem has unconnected port addr_in[13]
 WARNING: [Synth 8-3331] design IMem has unconnected port addr_in[12]
 WARNING: [Synth 8-3331] design IMem has unconnected port addr_in[11]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 507.453 ; gain = 152.426
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 507.352 ; gain = 152.266
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -139,11 +149,139 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 507.453 ; gain = 152.426
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 507.352 ; gain = 152.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 507.453 ; gain = 152.426
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 507.352 ; gain = 152.266
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
 CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
 Resolution: Please check the value of the property and set to a correct value.
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
@@ -151,36 +289,36 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Nexys4DDR_Master.xdc]
-Finished Parsing XDC File [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Nexys4DDR_Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Processor_propImpl.xdc].
+Parsing XDC File [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/constrs_1/imports/Project_Vivado/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/constrs_1/imports/Project_Vivado/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/constrs_1/imports/Project_Vivado/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Processor_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Processor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 872.297 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 871.512 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 872.297 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 871.512 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 872.297 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 872.297 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 871.512 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 871.512 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 872.297 ; gain = 517.270
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 871.512 ; gain = 516.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 872.297 ; gain = 517.270
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 871.512 ; gain = 516.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 872.297 ; gain = 517.270
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 871.512 ; gain = 516.426
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "IMrom" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "rom" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "r_reg[1]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "r_reg[2]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "r_reg[3]" won't be mapped to RAM because it is too sparse
@@ -233,8 +371,8 @@ WARNING: [Synth 8-327] inferring latch for variable 'imm_reg' [C:/Users/Anant/On
 WARNING: [Synth 8-327] inferring latch for variable 'bc_out_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/BranComp.v:15]
 WARNING: [Synth 8-327] inferring latch for variable 'ALUresult_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ALU.v:15]
 WARNING: [Synth 8-327] inferring latch for variable 'd_out_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/DataExt.v:18]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:216]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:216]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:217]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:217]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -245,15 +383,14 @@ WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' 
                  iSTATE2 |                            10000 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'ControlUnit'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:216]
-WARNING: [Synth 8-327] inferring latch for variable 'dmem_we_temp_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:154]
-WARNING: [Synth 8-327] inferring latch for variable 'halt_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:180]
-WARNING: [Synth 8-327] inferring latch for variable 'imm_op_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:98]
-WARNING: [Synth 8-327] inferring latch for variable 'data_op_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:145]
-WARNING: [Synth 8-327] inferring latch for variable 'bc_op_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:137]
-WARNING: [Synth 8-327] inferring latch for variable 'alu_op_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:107]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:217]
+WARNING: [Synth 8-327] inferring latch for variable 'dmem_we_temp_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:155]
+WARNING: [Synth 8-327] inferring latch for variable 'imm_op_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:99]
+WARNING: [Synth 8-327] inferring latch for variable 'data_op_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:146]
+WARNING: [Synth 8-327] inferring latch for variable 'bc_op_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:138]
+WARNING: [Synth 8-327] inferring latch for variable 'alu_op_reg' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:108]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 872.297 ; gain = 517.270
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 871.512 ; gain = 516.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -273,7 +410,7 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 39    
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
 +---RAMs : 
 	              32K Bit         RAMs := 1     
 +---Muxes : 
@@ -370,7 +507,7 @@ Detailed RTL Component Info :
 Module ControlUnit 
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
 +---Muxes : 
 	   5 Input      5 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 2     
@@ -404,7 +541,6 @@ INFO: [Synth 8-5546] ROM "rfile_mux" won't be mapped to RAM because it is too sp
 INFO: [Synth 8-5587] ROM size for "alu_mux1" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5546] ROM "alu_mux2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "op_mux" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "halt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "imm_op" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5587] ROM size for "alu_op" is below threshold of ROM address width. It will be mapped to LUTs
 WARNING: [Synth 8-3331] design ControlUnit has unconnected port instruction[31]
@@ -440,194 +576,145 @@ WARNING: [Synth 8-3331] design DMem has unconnected port addr_in[23]
 WARNING: [Synth 8-3331] design DMem has unconnected port addr_in[22]
 WARNING: [Synth 8-3331] design DMem has unconnected port addr_in[21]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6851] RAM (DMram_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
-INFO: [Synth 8-6851] RAM (DMram_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
-INFO: [Synth 8-3886] merging instance 'MainController/dmem_we_temp_reg[2]' (LD) to 'MainController/dmem_we_temp_reg[3]'
+INFO: [Synth 8-6851] RAM (ram_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
+INFO: [Synth 8-6851] RAM (ram_reg) has partial Byte Wide Write Enable pattern, however no output register found in fanout of RAM. Recommended to use supported Byte Wide Write Enable template. 
+INFO: [Synth 8-3886] merging instance 'InstructionMemory/instr_out_reg[26]' (FDE) to 'InstructionMemory/instr_out_reg[27]'
 INFO: [Synth 8-3886] merging instance 'InstructionMemory/instr_out_reg[28]' (FDE) to 'InstructionMemory/instr_out_reg[31]'
 INFO: [Synth 8-3886] merging instance 'InstructionMemory/instr_out_reg[29]' (FDE) to 'InstructionMemory/instr_out_reg[31]'
-INFO: [Synth 8-3886] merging instance 'InstructionMemory/instr_out_reg[26]' (FDE) to 'InstructionMemory/instr_out_reg[27]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (InstructionMemory/\instr_out_reg[8] )
 INFO: [Synth 8-3886] merging instance 'InstructionMemory/instr_out_reg[18]' (FDE) to 'InstructionMemory/instr_out_reg[19]'
-INFO: [Synth 8-3886] merging instance 'InstructionMemory/instr_out_reg[0]' (FDE) to 'InstructionMemory/instr_out_reg[1]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (InstructionMemory/\instr_out_reg[1] )
-WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (InstructionMemory/\instr_out_reg[8] )
+INFO: [Synth 8-3886] merging instance 'MainController/dmem_we_temp_reg[3]' (LD) to 'MainController/dmem_we_temp_reg[2]'
+INFO: [Synth 8-3886] merging instance 'InstructionMemory/instr_out_reg[1]' (FDE) to 'InstructionMemory/instr_out_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (InstructionMemory/\instr_out_reg[0] )
 WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
 WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
 WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
 WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+INFO: [Synth 8-3886] merging instance 'MainController/bc_op_reg[0]' (LD) to 'MainController/data_op_reg[0]'
+INFO: [Synth 8-3886] merging instance 'MainController/bc_op_reg[1]' (LD) to 'MainController/data_op_reg[1]'
+INFO: [Synth 8-3886] merging instance 'MainController/bc_op_reg[2]' (LD) to 'MainController/data_op_reg[2]'
 INFO: [Synth 8-3886] merging instance 'MainController/FSM_onehot_next_state_reg[2]' (LD) to 'MainController/FSM_onehot_next_state_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\DMrom_reg[3][7] )
 INFO: [Synth 8-3886] merging instance 'MainController/FSM_onehot_state_reg[2]' (FDC) to 'MainController/FSM_onehot_state_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[30] )
-INFO: [Synth 8-3886] merging instance 'MainController/data_op_reg[2]' (LD) to 'MainController/bc_op_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[31] )
-INFO: [Synth 8-3886] merging instance 'MainController/data_op_reg[1]' (LD) to 'MainController/bc_op_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/i_0/\data_out_reg[7] )
-INFO: [Synth 8-3886] merging instance 'MainController/data_op_reg[0]' (LD) to 'MainController/bc_op_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (MainController/\FSM_onehot_next_state_reg[3] )
-INFO: [Synth 8-3886] merging instance 'ImmediateExtender/imm_reg[8]' (LD) to 'ImmediateExtender/imm_reg[9]'
-INFO: [Synth 8-3886] merging instance 'ImmediateExtender/imm_reg[18]' (LD) to 'ImmediateExtender/imm_reg[19]'
 INFO: [Synth 8-3886] merging instance 'ImmediateExtender/imm_reg[26]' (LD) to 'ImmediateExtender/imm_reg[27]'
 INFO: [Synth 8-3886] merging instance 'ImmediateExtender/imm_reg[28]' (LD) to 'ImmediateExtender/imm_reg[29]'
 INFO: [Synth 8-3886] merging instance 'ImmediateExtender/imm_reg[29]' (LD) to 'ImmediateExtender/imm_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (MainController/\FSM_onehot_next_state_reg[3] )
 INFO: [Synth 8-3886] merging instance 'ImmediateExtender/imm_reg[6]' (LD) to 'ImmediateExtender/imm_reg[7]'
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[0]' (LD) to 'DataExtender/d_out_reg[1]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[1]' (LD) to 'DataExtender/d_out_reg[2]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[2]' (LD) to 'DataExtender/d_out_reg[3]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[3]' (LD) to 'DataExtender/d_out_reg[4]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[4]' (LD) to 'DataExtender/d_out_reg[5]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[5]' (LD) to 'DataExtender/d_out_reg[6]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[6]' (LD) to 'DataExtender/d_out_reg[7]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[8]' (LD) to 'DataExtender/d_out_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[9]' (LD) to 'DataExtender/d_out_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[10]' (LD) to 'DataExtender/d_out_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[11]' (LD) to 'DataExtender/d_out_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[12]' (LD) to 'DataExtender/d_out_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[13]' (LD) to 'DataExtender/d_out_reg[15]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[14]' (LD) to 'DataExtender/d_out_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataExtender/\d_out_reg[15] )
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[16]' (LD) to 'DataExtender/d_out_reg[17]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[17]' (LD) to 'DataExtender/d_out_reg[18]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[18]' (LD) to 'DataExtender/d_out_reg[19]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[19]' (LD) to 'DataExtender/d_out_reg[20]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[20]' (LD) to 'DataExtender/d_out_reg[21]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[21]' (LD) to 'DataExtender/d_out_reg[22]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[22]' (LD) to 'DataExtender/d_out_reg[23]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[23]' (LD) to 'DataExtender/d_out_reg[24]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[24]' (LD) to 'DataExtender/d_out_reg[25]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[25]' (LD) to 'DataExtender/d_out_reg[26]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[26]' (LD) to 'DataExtender/d_out_reg[27]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[27]' (LD) to 'DataExtender/d_out_reg[28]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[28]' (LD) to 'DataExtender/d_out_reg[29]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[29]' (LD) to 'DataExtender/d_out_reg[30]'
-INFO: [Synth 8-3886] merging instance 'DataExtender/d_out_reg[30]' (LD) to 'DataExtender/d_out_reg[31]'
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-3332] Sequential element (d_out_reg[15]) is unused and will be removed from module DataExt.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/load_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:194]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:194]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:194]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/store_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:195]
+INFO: [Synth 8-3886] merging instance 'ImmediateExtender/imm_reg[8]' (LD) to 'ImmediateExtender/imm_reg[9]'
+INFO: [Synth 8-3886] merging instance 'ImmediateExtender/imm_reg[18]' (LD) to 'ImmediateExtender/imm_reg[19]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (DataMemory/\rom_reg[3][31] )
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/load_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:195]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:195]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:195]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/branch_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:196]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/store_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:196]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:196]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:196]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/fence_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:197]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/branch_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:197]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:197]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:197]
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[3]) is unused and will be removed from module ControlUnit.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_next_state_reg[3]) is unused and will be removed from module ControlUnit.
-WARNING: [Synth 8-3332] Sequential element (dmem_we_temp_reg[3]) is unused and will be removed from module ControlUnit.
-WARNING: [Synth 8-3332] Sequential element (dmem_we_temp_reg[1]) is unused and will be removed from module ControlUnit.
-WARNING: [Synth 8-3332] Sequential element (dmem_we_temp_reg[0]) is unused and will be removed from module ControlUnit.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/halt_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:198]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/fence_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:198]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:198]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:198]
-WARNING: [Synth 8-3332] Sequential element (halt_reg__1) is unused and will be removed from module ControlUnit.
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MainController/halt_reg/Q' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:199]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:199]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/sources_1/new/ControlUnit.v:199]
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[3]) is unused and will be removed from module ControlUnit.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_next_state_reg[3]) is unused and will be removed from module ControlUnit.
+WARNING: [Synth 8-3332] Sequential element (dmem_we_temp_reg[2]) is unused and will be removed from module ControlUnit.
+WARNING: [Synth 8-3332] Sequential element (dmem_we_temp_reg[1]) is unused and will be removed from module ControlUnit.
+WARNING: [Synth 8-3332] Sequential element (dmem_we_temp_reg[0]) is unused and will be removed from module ControlUnit.
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 872.297 ; gain = 517.270
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 871.512 ; gain = 516.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++------------+------------+-----------+----------------------+-------------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives        | 
++------------+------------+-----------+----------------------+-------------------+
+|DataMemory  | ram_reg    | Implied   | 1 K x 32             | RAM256X1S x 128   | 
++------------+------------+-----------+----------------------+-------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -639,25 +726,39 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 872.297 ; gain = 517.270
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 871.512 ; gain = 516.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[1]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[0]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
-WARNING: [Synth 8-264] enable of latch MainController/\bc_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch MainController/\data_op_reg[2]  is always disabled
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:52 . Memory (MB): peak = 880.902 ; gain = 525.875
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 875.320 ; gain = 520.234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping  Report
++------------+------------+-----------+----------------------+-------------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives        | 
++------------+------------+-----------+----------------------+-------------------+
+|DataMemory  | ram_reg    | Implied   | 1 K x 32             | RAM256X1S x 128   | 
++------------+------------+-----------+----------------------+-------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -668,14 +769,32 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (DataExtender/d_out_reg[31]) is unused and will be removed from module Processor.
-WARNING: [Synth 8-3332] Sequential element (DataExtender/d_out_reg[7]) is unused and will be removed from module Processor.
-WARNING: [Synth 8-3332] Sequential element (MainController/bc_op_reg[2]) is unused and will be removed from module Processor.
-WARNING: [Synth 8-3332] Sequential element (MainController/bc_op_reg[1]) is unused and will be removed from module Processor.
-WARNING: [Synth 8-3332] Sequential element (MainController/bc_op_reg[0]) is unused and will be removed from module Processor.
-WARNING: [Synth 8-3332] Sequential element (BranchComparator/bc_out_reg) is unused and will be removed from module Processor.
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[0]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[1]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[2]  is always disabled
+WARNING: [Synth 8-264] enable of latch \MainController/data_op_reg[2]  is always disabled
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:00:53 . Memory (MB): peak = 902.066 ; gain = 547.039
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 917.262 ; gain = 562.176
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -699,7 +818,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 902.066 ; gain = 547.039
+Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 917.262 ; gain = 562.176
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -712,7 +831,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 902.066 ; gain = 547.039
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 917.262 ; gain = 562.176
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -724,25 +843,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 902.066 ; gain = 547.039
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 917.262 ; gain = 562.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 902.066 ; gain = 547.039
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 917.262 ; gain = 562.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 902.066 ; gain = 547.039
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 917.262 ; gain = 562.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 902.066 ; gain = 547.039
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 917.262 ; gain = 562.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -755,64 +874,138 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |BUFG   |     2|
-|2     |CARRY4 |    35|
-|3     |LUT1   |     2|
-|4     |LUT2   |    79|
-|5     |LUT3   |    92|
-|6     |LUT4   |   228|
-|7     |LUT5   |   110|
-|8     |LUT6   |   556|
-|9     |MUXF7  |    38|
-|10    |MUXF8  |     3|
-|11    |FDCE   |    33|
-|12    |FDPE   |     2|
-|13    |FDRE   |   505|
-|14    |LD     |    68|
-|15    |IBUF   |     2|
-|16    |OBUF   |     1|
-+------+-------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     3|
+|2     |CARRY4    |    43|
+|3     |LUT1      |     7|
+|4     |LUT2      |    82|
+|5     |LUT3      |   133|
+|6     |LUT4      |   288|
+|7     |LUT5      |    86|
+|8     |LUT6      |   625|
+|9     |MUXF7     |    38|
+|10    |MUXF8     |     3|
+|11    |RAM256X1S |    32|
+|12    |FDCE      |    33|
+|13    |FDPE      |     2|
+|14    |FDRE      |   537|
+|15    |LD        |   104|
+|16    |IBUF      |     2|
+|17    |OBUF      |     1|
++------+----------+------+
 
 Report Instance Areas: 
 +------+----------------------+------------+------+
 |      |Instance              |Module      |Cells |
 +------+----------------------+------------+------+
-|1     |top                   |            |  1756|
-|2     |  ArithmaticLogicUnit |ALU         |    64|
-|3     |  ImmediateExtender   |ImmExt      |    27|
-|4     |  InstructionMemory   |IMem        |   451|
-|5     |  MainController      |ControlUnit |   129|
-|6     |  ProgramCounter      |PCnt        |    72|
-|7     |  RegisterFile        |RegFile     |  1008|
+|1     |top                   |            |  2019|
+|2     |  ImmediateExtender   |ImmExt      |    27|
+|3     |  DataExtender        |DataExt     |    56|
+|4     |  ArithmaticLogicUnit |ALU         |    90|
+|5     |  BranchComparator    |BranComp    |     2|
+|6     |  DataMemory          |DMem        |    64|
+|7     |  InstructionMemory   |IMem        |   146|
+|8     |  MainController      |ControlUnit |   116|
+|9     |  ProgramCounter      |PCnt        |   104|
+|10    |  RegisterFile        |RegFile     |  1402|
 +------+----------------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 902.066 ; gain = 547.039
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 917.262 ; gain = 562.176
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 15 critical warnings and 161 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:45 . Memory (MB): peak = 902.066 ; gain = 182.195
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 902.066 ; gain = 547.039
+Synthesis finished with 0 errors, 15 critical warnings and 176 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 917.262 ; gain = 198.016
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 917.262 ; gain = 562.176
 INFO: [Project 1-571] Translating synthesized netlist
 CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
 Resolution: Please check the value of the property and set to a correct value.
-INFO: [Netlist 29-17] Analyzing 144 Unisim elements for replacement
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{true}' specified for property 'dont_touch'. Expecting type 'bool' with possible values of '1,0'. The system will either use the default value or the property value will be dropped. Please verify your source files.
+Resolution: Please check the value of the property and set to a correct value.
+INFO: [Common 17-14] Message 'Netlist 29-72' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Netlist 29-17] Analyzing 220 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 902.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 917.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 68 instances were transformed.
-  LD => LDCE: 68 instances
+  A total of 136 instances were transformed.
+  LD => LDCE: 104 instances
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 32 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-213 Infos, 187 Warnings, 17 Critical Warnings and 0 Errors encountered.
+161 Infos, 202 Warnings, 115 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 902.066 ; gain = 559.668
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 902.066 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 917.262 ; gain = 575.070
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 917.262 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.runs/synth_1/Processor.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Processor_utilization_synth.rpt -pb Processor_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  9 21:01:31 2021...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 10 07:18:31 2021...

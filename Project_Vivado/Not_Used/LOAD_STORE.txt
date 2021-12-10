@@ -10,14 +10,12 @@
 
 reset_handler:
 lui x2, 0x80000
-lui x3, 0xFFFFF
-addi x4, x3, 0xFF
+lui x3, 0xFB39F
+addi x4, x3, 0xFA
 
-sw x4, 0(x2)
-sw x4, 4(x2)
 sb x4, 8(x2)
 sh x4, 12(x2)
-sw x4, 16(x2)
+sw x4, 4(x2)
 
 lb x6, 8(x2)
 lh x7, 12(x2) 
@@ -33,19 +31,6 @@ ecall
 
 How to load 0xFFFFFFFF ?
 
-80000137
-fffff1b7
-0ff18213
-00412023
-00412223
-00410423
-00411623
-00412823
-00810303
-00c11383
-00814483
-00c15503
-00012403
-00000073
+
 
 */
