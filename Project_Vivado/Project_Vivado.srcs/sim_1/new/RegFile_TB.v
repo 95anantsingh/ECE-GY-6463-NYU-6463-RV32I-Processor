@@ -69,8 +69,9 @@ module RegFile_TB(
        rs2 <= 5'b00110;            
        rd <=5'b00001;  
        rd_data_in <= 32'd0;
-       if((rs1_data!=32'h01234567)&(rs2_data!=32'h89ABCDEF)) $fatal("Read Operation failed");
-       #10;
+       #1;
+       if((rs1_data!=32'h89ABCDEF)&(rs2_data!=32'h01234567)) $fatal("Read Operation failed");
+       #9;
        
        
 //writing is not possible to hardwired reg 0
@@ -79,8 +80,9 @@ module RegFile_TB(
        rs2 <= 5'b00000;            
        rd <=5'b00000;  //Reg0
        rd_data_in <= 32'h01234567;
+       #1;
        if((rs1_data!=32'h00000000)&(rs2_data!=32'h00000000)) $fatal("Register 0 is special read-only register, we cannot write to it even if write enable is high");
-       #10
+       #9;
   
         $display("All tests passed");
         $finish;
@@ -89,3 +91,4 @@ module RegFile_TB(
     end
 
 endmodule
+
