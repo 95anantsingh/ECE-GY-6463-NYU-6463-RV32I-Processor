@@ -58,7 +58,6 @@ module DMem(
     wire [11:0] addr=(addr_in[`RAM_ADDR_BITS-1:0]>>2);
 
     always @(posedge clk) begin  
-        if (addr < 12'd1024) begin
             if (addr_in[`STARTING_ADDR_BIT-1]) begin
                 if (we)
                     if(addr==12'd4)
@@ -82,7 +81,6 @@ module DMem(
                     data_out <= DMram[addr];
             end
         end
-    end
 endmodule
 
 // DMem TCL Simulation Commands
