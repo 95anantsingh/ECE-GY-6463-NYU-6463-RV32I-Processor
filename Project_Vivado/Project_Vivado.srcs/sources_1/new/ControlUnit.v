@@ -92,19 +92,19 @@ module ControlUnit(
         op_mux <= 0;
 
         case(opcode)
-            `LUI: begin
+            `LUI: begin                  // U-TYPE
                 // Loads the immediate value into the upper 20 bits of the 
                 // target register rd and sets the lower bits to 0
                 op_mux <= 2'd2;
-                imm_op <= 3'd4;         // U-TYPE
+                imm_op <= 3'd4;        
             end
      
-            `AUIPC: begin
+            `AUIPC: begin               // U-TYPE
                 // Forms a 32-bit offset from the 20-bit value by filling 
                 // the lower bits with zeros, adds this to pc_out, and stores
                 // the result in rd
                 alu_mux1 <= 1;
-                imm_op <=3'd4;          // U-TYPE
+                imm_op <=3'd4;          
                 alu_op <= `ADD;                               
             end
             
@@ -160,8 +160,8 @@ module ControlUnit(
                 endcase
             end
             
-            `IMM:begin
-                imm_op <= 3'd1;             // I-TYPE
+            `IMM:begin                  // I-TYPE
+                imm_op <= 3'd1;             
                 if (funct3 == 3'b101)
                     alu_op <= {instruction[30], funct3};
                 else
@@ -181,7 +181,6 @@ module ControlUnit(
                 halt<=1;
             end
             default: begin
-                //halt<=1;
                 //$display("Invalid OPCODE MCU");
             end
         endcase
@@ -192,11 +191,6 @@ module ControlUnit(
     always @(posedge clk or negedge rstn) begin
         if(!rstn) begin
             state <= `IF;
-            load <= 0;
-            store <= 0;
-            branch <=0;
-            fence <=0;
-            halt <= 0;
         end
         else
             state <= next_state;    

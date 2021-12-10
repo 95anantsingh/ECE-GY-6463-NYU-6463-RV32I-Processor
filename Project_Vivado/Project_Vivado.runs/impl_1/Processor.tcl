@@ -65,12 +65,17 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.runs/impl_1/Processor.dcp
+  create_project -in_memory -part xc7a100tcsg324-1
+  set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.cache/wt [current_project]
   set_property parent.project_path C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.xpr [current_project]
   set_property ip_output_repo C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.runs/synth_1/Processor.dcp
+  read_xdc C:/Users/Anant/OneDrive/Documents/Courses/NYU/F21_ECE_GY_6463_Advanced_Hardware_Design/Project/ECE-GY-6463-NYU-6463-RV32I-Processor/Project_Vivado/Project_Vivado.srcs/constrs_1/imports/Project_Vivado/Nexys4DDR_Master.xdc
+  link_design -top Processor -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1639138874">
-  <File Type="OPT-HWDEF" Name="Processor.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Processor_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="Processor.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1639142670">
   <File Type="BITSTR-BMM" Name="Processor_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Processor_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Processor_timing_summary_init.rpt"/>
@@ -13,6 +10,7 @@
   <File Type="ROUTE-PWR-SUM" Name="Processor_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Processor_reports.tcl"/>
   <File Type="OPT-DRC" Name="Processor_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Processor.hwdef"/>
   <File Type="PWROPT-DCP" Name="Processor_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="Processor_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="Processor_timing_summary_pwropted.rpt"/>
@@ -24,6 +22,7 @@
   <File Type="PLACE-CTRL" Name="Processor_control_sets_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="Processor_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Processor_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="Processor.bgn"/>
   <File Type="PLACE-TIMING" Name="Processor_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="Processor_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="Processor.bin"/>
@@ -53,6 +52,7 @@
   <File Type="ROUTE-TIMING-RPX" Name="Processor_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="Processor_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="Processor_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Processor_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Processor_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Processor_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Processor_postroute_physopt.dcp"/>
@@ -66,7 +66,6 @@
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Processor_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="Processor.rbt"/>
   <File Type="BITSTR-NKY" Name="Processor.nky"/>
-  <File Type="BG-BGN" Name="Processor.bgn"/>
   <File Type="BG-DRC" Name="Processor.drc"/>
   <File Type="RDI-RDI" Name="Processor.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
