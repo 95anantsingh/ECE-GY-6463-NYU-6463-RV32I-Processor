@@ -37,20 +37,20 @@ module Processor_TB(
         
         //  lui x5, 32      # x5 = {20'd32, 12'b0}
         #3;
-        if(RegFile.r[5] != ({20'd32, 12'b0})) $fatal("Error in LUI instruction");
+        if(RegFile.r[5] != ({20'd32, 12'b0})) $fatal(1,"Error in LUI instruction");
         
         //  auipc x6, 10    # x6 = PC + {imm[31:12], 12'b0}
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(RegFile.r[6] != (t_pc + {20'd10, 12'b0})) $fatal("Error in AUIPC instruction");
+        if(RegFile.r[6] != (t_pc + {20'd10, 12'b0})) $fatal(1,"Error in AUIPC instruction");
         
         //  jal x2, loop    # x2 = PC + 4; PC = PC + sign_ext(8), Jump 1 instruction
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(RegFile.r[2] != (t_pc + 32'd4)) $fatal("Error in JAL instruction");
-        if(PCnt.data_out != (t_pc + 32'd8)) $fatal("Error in JAL instruction");
+        if(RegFile.r[2] != (t_pc + 32'd4)) $fatal(1,"Error in JAL instruction");
+        if(PCnt.data_out != (t_pc + 32'd8)) $fatal(1,"Error in JAL instruction");
         
         //  loop: lui x5, 2 # x5 = {20'd2, 12'b0}, Load Extended(2) in x5
         #3;
@@ -59,14 +59,14 @@ module Processor_TB(
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        //if(RegFile.r[0] != 32'd0) $fatal("Error in JALR instruction");
-        if(PCnt.data_out != (RegFile.r[2])) $fatal("Error in JALR instruction");
+        //if(RegFile.r[0] != 32'd0) $fatal(1,"Error in JALR instruction");
+        if(PCnt.data_out != (RegFile.r[2])) $fatal(1,"Error in JALR instruction");
                        
         //  ecall       # Halt
         #1;                   
         t_pc <= PCnt.data_out;
         #10;
-        if(PCnt.data_out != t_pc) $fatal("Error in HALT instruction");
+        if(PCnt.data_out != t_pc) $fatal(1,"Error in ECALL instruction");
         
 
 //---// Test 2 - Testing for Branch Ins BEQ, BNE, BLT, BGE, BLTU, BGEU
@@ -123,74 +123,74 @@ module Processor_TB(
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd4)) $fatal("Error in BEQ instruction");
+        if(PCnt.data_out != (t_pc + 32'd4)) $fatal(1,"Error in BEQ instruction");
         
         // beq x2, x3, BNE  # PC = (x2 == x3) ? PC + sign_ext(8) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd8)) $fatal("Error in BEQ instruction");
+        if(PCnt.data_out != (t_pc + 32'd8)) $fatal(1,"Error in BEQ instruction");
         
         // bne x1, x1, BLT  # PC = (x1 != x1) ? PC + sign_ext(12) : PC + 4
  
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd4)) $fatal("Error in BNE instruction");
+        if(PCnt.data_out != (t_pc + 32'd4)) $fatal(1,"Error in BNE instruction");
         
         // bne x1, x2, BLT  # PC = (x1 != x2) ? PC + sign_ext(8) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd8)) $fatal("Error in BNE instruction");
+        if(PCnt.data_out != (t_pc + 32'd8)) $fatal(1,"Error in BNE instruction");
          
         // blt x2, x1, BLTU # PC = (signed(x2) < signed(x1)) ? PC + sign_ext(12) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd4)) $fatal("Error in BLT instruction");
+        if(PCnt.data_out != (t_pc + 32'd4)) $fatal(1,"Error in BLT instruction");
         
         // blt x1, x2, BLTU # PC = (signed(x1) < signed(x2)) ? PC + sign_ext(8) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd8)) $fatal("Error in BLT instruction");
+        if(PCnt.data_out != (t_pc + 32'd8)) $fatal(1,"Error in BLT instruction");
         
         // bltu x1, x2, BGE # PC = (unsigned(x1) < unsigned(x2)) ? PC + sign_ext(12) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd4)) $fatal("Error in BLTU instruction");
+        if(PCnt.data_out != (t_pc + 32'd4)) $fatal(1,"Error in BLTU instruction");
         
         // bltu x2, x1, BGE # PC = (unsigned(x2) < unsigned(x1)) ? PC + sign_ext(8) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd8)) $fatal("Error in BLTU instruction");
+        if(PCnt.data_out != (t_pc + 32'd8)) $fatal(1,"Error in BLTU instruction");
         
         // bge x1, x2, BGEU # PC = (signed(x1) >= signed(x2)) ? PC + sign_ext(12) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd4)) $fatal("Error in BGE instruction");
+        if(PCnt.data_out != (t_pc + 32'd4)) $fatal(1,"Error in BGE instruction");
         
         // bge x2, x1, BGEU # PC = (signed(x2) >= signed(x1)) ? PC + sign_ext(8) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd8)) $fatal("Error in BGE instruction");
+        if(PCnt.data_out != (t_pc + 32'd8)) $fatal(1,"Error in BGE instruction");
        
         // bgeu x2, x1, END # PC = (unsigned(x2) >= unsigned(x1)) ? PC + sign_ext(12) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd4)) $fatal("Error in BGEU instruction");
+        if(PCnt.data_out != (t_pc + 32'd4)) $fatal(1,"Error in BGEU instruction");
         
         // bgeu x1, x2, END # PC = (unsigned(x1) >= unsigned(x2)) ? PC + sign_ext(8) : PC + 4
         #1;
         t_pc <= PCnt.data_out;
         #2;
-        if(PCnt.data_out != (t_pc + 32'd8)) $fatal("Error in BGEU instruction");
+        if(PCnt.data_out != (t_pc + 32'd8)) $fatal(1,"Error in BGEU instruction");
         
         // lui x20, 40
         #3;
@@ -199,7 +199,7 @@ module Processor_TB(
         #1;                   
         t_pc <= PCnt.data_out;
         #10;
-        if(PCnt.data_out != t_pc) $fatal("Error in HALT instruction");       
+        if(PCnt.data_out != t_pc) $fatal(1,"Error in HALT instruction");       
         
         
 //---// Test 3 - Testing for Load Store Ins LB, LH, LW, LBU, LHU, SB, SH, SW
@@ -232,35 +232,35 @@ module Processor_TB(
          
         // sb x4, 8(x2)     # DMem[x2 + sign_ext(8)][7:0] = x4[7:0] 
         #4;
-        if(DMem.ram[2][7:0] != 8'hFA) $fatal("Error in SB instruction");
+        if(DMem.ram[2][7:0] != 8'hFA) $fatal(1,"Error in SB instruction");
         
         // sh x4, 12(x2)    # DMem[x2 + sign_ext(12)][15:0] = x4[15:0]
         #4;
-        if(DMem.ram[3][15:0] != 16'hF0FA) $fatal("Error in SH instruction");
+        if(DMem.ram[3][15:0] != 16'hF0FA) $fatal(1,"Error in SH instruction");
         
         // sw x4, 4(x2)     # DMem[x2 + sign_ext(4)][31:0] = x4
         #4;
-        if(DMem.ram[1] != 32'hFB39F0FA) $fatal("Error in SW instruction");
+        if(DMem.ram[1] != 32'hFB39F0FA) $fatal(1,"Error in SW instruction");
 
         // lb x6, 8(x2)     # x6 = sign_ext( DMem[x2 + sign_ext(8)][7:0])
         #4;
-        if(RegFile.r[6] != 32'hFFFFFFFA) $fatal("Error in LB instruction");
+        if(RegFile.r[6] != 32'hFFFFFFFA) $fatal(1,"Error in LB instruction");
         
         // lh x7, 12(x2)    # x7 = sign_ext( DMem[x2 + sign_ext(12)][15:0])
         #4;
-        if(RegFile.r[7] != 32'hFFFFF0FA) $fatal("Error in LH instruction");
+        if(RegFile.r[7] != 32'hFFFFF0FA) $fatal(1,"Error in LH instruction");
         
         // lbu x9, 8(x2)    # x9 = zero_ext( DMem[x2 + sign_ext(8)][7:0])
         #4;
-        if(RegFile.r[9] != 32'h000000FA) $fatal("Error in LBU instruction");
+        if(RegFile.r[9] != 32'h000000FA) $fatal(1,"Error in LBU instruction");
         
         // lhu x10, 12(x2)  # x10 = zero_ext( DMem[x2 + sign_ext(12)][15:0])
         #4;
-        if(RegFile.r[10] != 32'h0000F0FA) $fatal("Error in LHU instruction");
+        if(RegFile.r[10] != 32'h0000F0FA) $fatal(1,"Error in LHU instruction");
         
         // lw x8, 0(x2)     # x8 = DMem[x2 + sign_ext(0)][31:0]
         #4;
-        if(RegFile.r[8] != 32'hF53F30FA) $fatal("Error in LW instruction");
+        if(RegFile.r[8] != 32'hF53F30FA) $fatal(1,"Error in LW instruction");
         
         // 
         // ecall       
@@ -303,92 +303,92 @@ module Processor_TB(
         
         // addi x1, x0, 0b10111011
         #3;
-        if(RegFile.r[1] != 32'b10111011) $fatal("Error in ADDI instruction");
+        if(RegFile.r[1] != 32'b10111011) $fatal(1,"Error in ADDI instruction");
         
         // addi x2, x0, 0b10100110
         #3;
         
         // addi x3, x0, 5   # x3 = x0 + sign_ext(5)
         #3;
-        if(RegFile.r[3] != 32'd5) $fatal("Error in ADDI instruction");
+        if(RegFile.r[3] != 32'd5) $fatal(1,"Error in ADDI instruction");
         
         // slti x5, x0, 5   # x5 = (signed(x0) < sign_ext(5)) ? 1 : 0
         #3;
-        if(RegFile.r[5] != 32'd1) $fatal("Error in SLTI instruction");
+        if(RegFile.r[5] != 32'd1) $fatal(1,"Error in SLTI instruction");
 
         // sltiu x6, x1, 2  # x6 = (unsigned(x1) < unsigned(sign_ext(2))) ? 1 : 0
         #3;
-        if(RegFile.r[6] != 32'd0) $fatal("Error in SLTIU instruction");
+        if(RegFile.r[6] != 32'd0) $fatal(1,"Error in SLTIU instruction");
         
         // xori x4, x1, 0b10110011  # x4 = x1 ^ sign_ext(0b10110011)
         #3;
-        if(RegFile.r[4] != 32'b00001000) $fatal("Error in XORI instruction");
+        if(RegFile.r[4] != 32'b00001000) $fatal(1,"Error in XORI instruction");
         
         // ori x5, x1, 0b10110001   # x5 = x1 | sign_ext(0b10110001)
         #3;
-        if(RegFile.r[5] != 32'b10111011) $fatal("Error in ORI instruction");
+        if(RegFile.r[5] != 32'b10111011) $fatal(1,"Error in ORI instruction");
         
         // andi x6, x1, 0b10110010  # x6 = x1 & sign_ext(0b10110010)
         #3;
-        if(RegFile.r[6] != 32'b10110010) $fatal("Error in ANDI instruction");
+        if(RegFile.r[6] != 32'b10110010) $fatal(1,"Error in ANDI instruction");
                 
         // slli x4, x1, 7   # x4 = x1 << 7
         #3;
-        if(RegFile.r[4] != 32'b101110110000000) $fatal("Error in SLLI instruction");
+        if(RegFile.r[4] != 32'b101110110000000) $fatal(1,"Error in SLLI instruction");
         
         // srli x5, x1, 3   # x5 = unsigned(x1) >> 3
         #3;
-        if(RegFile.r[5] != 32'b10111) $fatal("Error in SRLI instruction");
+        if(RegFile.r[5] != 32'b10111) $fatal(1,"Error in SRLI instruction");
         
         // srai x6, x1, 4   # x6 = signed(x1) >> 4
         #3;
-        if(RegFile.r[6] != 32'b1011) $fatal("Error in SRAI instruction");
+        if(RegFile.r[6] != 32'b1011) $fatal(1,"Error in SRAI instruction");
         
         // add x4, x2, x3   # x4 = x2 + x3
         #3;
-        if(RegFile.r[4] != 32'd171) $fatal("Error in ADD instruction");
+        if(RegFile.r[4] != 32'd171) $fatal(1,"Error in ADD instruction");
         
         // sub x5, x2, x3   # x5 = x2 - x3
         #3;
-        if(RegFile.r[5] != 32'd161) $fatal("Error in SUB instruction");
+        if(RegFile.r[5] != 32'd161) $fatal(1,"Error in SUB instruction");
         
         // sll x6, x2, x3   # x6 =  x2 << x3[4:0]
         #3;
-        if(RegFile.r[6] != 32'b1010011000000) $fatal("Error in SLL instruction");
+        if(RegFile.r[6] != 32'b1010011000000) $fatal(1,"Error in SLL instruction");
         
         // slt x7, x2, x3   # x7 = (signed(x2) < signed(x3)) ? 1 : 0
         #3;                                                                      
-        if(RegFile.r[7] != 32'd0) $fatal("Error in SLT instruction");
+        if(RegFile.r[7] != 32'd0) $fatal(1,"Error in SLT instruction");
         
         // sltu x8, x2, x3  # x8 = (unsigned(x2) < unsigned(x3)) ? 1 : 0
         #3;                                                                      
-        if(RegFile.r[8] != 32'd0) $fatal("Error in SLTU instruction");
+        if(RegFile.r[8] != 32'd0) $fatal(1,"Error in SLTU instruction");
         
         // xor x4, x1, x2   # x4 = x1 ^ x2
         #3;
-        if(RegFile.r[4] != 32'b00011101) $fatal("Error in XOR instruction");
+        if(RegFile.r[4] != 32'b00011101) $fatal(1,"Error in XOR instruction");
         
         // srl x5, x2, x3   # x5 = x2 >> x3[5:0]
         #3;                                                                      
-       if(RegFile.r[5] != 32'b101) $fatal("Error in SRL instruction");
+       if(RegFile.r[5] != 32'b101) $fatal(1,"Error in SRL instruction");
         
         // sra x6, x2, x3   # x6 = signed(x2) >> x3[5:0]
         #3;                                                                      
-        if(RegFile.r[6] != 32'b101) $fatal("Error in SRA instruction");
+        if(RegFile.r[6] != 32'b101) $fatal(1,"Error in SRA instruction");
         
         // or x7, x1, x2    # x7 = x1 | x2
         #3;
-        if(RegFile.r[7] != 32'b10111111) $fatal("Error in OR instruction");
+        if(RegFile.r[7] != 32'b10111111) $fatal(1,"Error in OR instruction");
         
         // and x8, x1, x2   # x8 = x1 & x2
          #3;
-        if(RegFile.r[8] != 32'b10100010) $fatal("Error in AND instruction");
+        if(RegFile.r[8] != 32'b10100010) $fatal(1,"Error in AND instruction");
         
         // fence            # PC = PC + 4
         #1
         t_pc <= PCnt.data_out;
         #2
-        if(PCnt.data_out != (t_pc + 32'd4)) $fatal("Error in FENCE instruction");
+        if(PCnt.data_out != (t_pc + 32'd4)) $fatal(1,"Error in FENCE instruction");
         
         // add x1, x2, x3   #
         #3
@@ -396,7 +396,7 @@ module Processor_TB(
         #1;                   
         t_pc <= PCnt.data_out;
         #10;
-        if(PCnt.data_out != t_pc) $fatal("Error in HALT instruction");
+        if(PCnt.data_out != t_pc) $fatal(1,"Error in HALT instruction");
         
         
         $display("\nAll test Passed\n");

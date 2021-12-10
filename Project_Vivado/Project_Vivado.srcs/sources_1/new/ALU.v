@@ -9,7 +9,7 @@ module ALU(
     output reg [31:0] ALUresult
     );
     
-   always @(*) begin
+    always @(*) begin
         case (operation)
             `ADD: 
                 ALUresult <= operand1 + operand2;

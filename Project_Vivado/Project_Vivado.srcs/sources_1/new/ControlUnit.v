@@ -59,15 +59,6 @@ module ControlUnit(
      reg [0:2] state;
      reg [0:2] next_state;
 
-
-    initial begin
-        imm_op <= 0;
-        data_op <= 0;
-        bc_op <= 0;
-        alu_op <= 0;
-        dmem_we_temp <= 0;
-    end
-    
      
     //Combinational Logic
     always@(*) begin
@@ -90,6 +81,13 @@ module ControlUnit(
         alu_mux1 <= 0;
         alu_mux2 <= 0;
         op_mux <= 0;
+        
+        // default Opcodes
+        imm_op <= 0;
+        data_op <= 0;
+        bc_op <= 0;
+        alu_op <= 0;
+        dmem_we_temp <= 0;
 
         case(opcode)
             `LUI: begin                  // U-TYPE
@@ -203,6 +201,8 @@ module ControlUnit(
         rf_we <= 0;
         dmem_rd <= 0;
         dmem_we <= 4'd0;
+        next_state <= 0;
+
         
         case (state)
             // Instruction Fetch
@@ -215,7 +215,7 @@ module ControlUnit(
                 if(halt) next_state <= `HALT;
                 else if (load | store)
                     next_state <= `MEM;
-                else                        // No need for Memory stage
+                else                            // No need for Memory stage
                     next_state <= `WB;
             end
             // Memory Read Write
@@ -232,8 +232,8 @@ module ControlUnit(
                 end
                 next_state <= `IF;
             end
-            `HALT: begin                // Halt 
-                //Do nothing
+            `HALT: begin                // Halt
+                next_state <= `HALT;
             end
        endcase
     end

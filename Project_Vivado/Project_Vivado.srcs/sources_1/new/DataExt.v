@@ -35,7 +35,7 @@ output wire [31:0] dout
                 d_out <= {16'b0000000000000000, data[15:0]}; 
             end
             default:
-                $display("Incorrect opcode");
+                d_out <= 0;
         endcase
     end
     

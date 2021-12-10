@@ -52,6 +52,8 @@ module ImmExt(
                 //else
                     imm <= {immu[31:12], 12'd0};
             end
+            default:
+                imm <= 0;
         endcase
     end
 

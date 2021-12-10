@@ -23,6 +23,8 @@ module BranComp(
                 bc_out <= (data_in1 < data_in2)? 1:0;
             `BGEU:
                 bc_out <= (data_in1 < data_in2)? 0:1;
+             default:
+                bc_out <= bc_out;
         endcase
     end
     
