@@ -44,9 +44,9 @@ module DMem(
 //        ram[1023] <= 32'h11111111;
       
         // ROM
-        rom[0] <= 32'd`TANISHA;
-        rom[1] <= 32'd`ANANT;
-        rom[2] <= 32'd`EESHA;
+        rom[0] <= 32'h`TANISHA;
+        rom[1] <= 32'h`ANANT;
+        rom[2] <= 32'h`EESHA;
        
         // IO
         rom[3]<=32'd0;
