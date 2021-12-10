@@ -11,7 +11,7 @@ module PC_TB(
 
     
     PCnt DUT(
-    .clk(clk), .rst(rst), .we(we), .next_pc(next_pc), .pc(pc)
+    .clk(clk), .rstn(rst), .we(we), .data_in(next_pc), .data_out(pc)
     );    
     
     initial begin: CLK_GEN
