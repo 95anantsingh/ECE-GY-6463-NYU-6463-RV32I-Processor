@@ -19,9 +19,9 @@ module Processor(
     wire IM_rd;                        
     wire [31:0] IM_addr_in;   
     wire [31:0] IM_out;   
-    IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .instr_out(IM_out));
     assign IM_addr_in = PC_out;
-    
+    IMem InstructionMemory(.clk(clk), .rd(IM_rd), .addr_in(IM_addr_in), .instr_out(IM_out));
+
     
     // Register File
     wire RF_we;               
@@ -31,19 +31,19 @@ module Processor(
     wire [31:0] RF_rd_data_in; 
     wire [31:0] RF_rs1_data;
     wire [31:0] RF_rs2_data;
-    RegFile RegisterFile(.clk(clk), .rstn(rstn), .we(RF_we), .rd(RF_rd), .rs1(RF_rs1), .rs2(RF_rs2),          
-                         .rd_data_in(RF_rd_data_in), .rs1_data(RF_rs1_data), .rs2_data(RF_rs2_data));  
     assign RF_rd = IM_out[11:7];
     assign RF_rs1 = IM_out[19:15];
     assign RF_rs2 = IM_out[24:20];
+    RegFile RegisterFile(.clk(clk), .rstn(rstn), .we(RF_we), .rd(RF_rd), .rs1(RF_rs1), .rs2(RF_rs2),          
+                         .rd_data_in(RF_rd_data_in), .rs1_data(RF_rs1_data), .rs2_data(RF_rs2_data));  
     
     
     // Immediate Extender
     wire [2:0] IE_opc;   
     wire [31:0] IE_instr;
     wire [31:0] IE_out; 
-    ImmExt ImmediateExtender(.opcode(IE_opc),.instr(IE_instr),.ext_imm(IE_out));
     assign IE_instr = IM_out;
+    ImmExt ImmediateExtender(.opcode(IE_opc),.instr(IE_instr),.ext_imm(IE_out));
     
     
     // Branch Comparator
@@ -51,9 +51,9 @@ module Processor(
     wire [31:0] BC_in1;
     wire [31:0] BC_in2;
     wire BC_out;
-    BranComp BranchComparator(.bc_op(BC_opc), .data_in1(BC_in1), .data_in2(BC_in2), .bc_out(BC_out));
     assign BC_in1 = RF_rs1_data;
     assign BC_in2 = RF_rs2_data;
+    BranComp BranchComparator(.bc_op(BC_opc), .data_in1(BC_in1), .data_in2(BC_in2), .bc_out(BC_out));
     
     
     // ALU
@@ -70,18 +70,19 @@ module Processor(
     wire [31:0] DM_addr_in;   
     wire [31:0] DM_in;   
     wire [31:0] DM_out;   
+    assign DM_addr_in = ALU_out;
+    assign DM_in = RF_rs2_data;
     DMem DataMemory(.clk(clk), .rd(DM_rd), .we(DM_we), .addr_in(DM_addr_in), .data_in(DM_in), 
                     .data_out(DM_out)); 
-    assign DM_addr_in = ALU_out;
-    assign DM_in = RF_rs2_data;  
+    
     
     
     // Data Extender
     wire [2:0] DE_opc;
     wire [31:0] DE_in;
     wire [31:0] DE_out; 
-    DataExt DataExtender(.opcode(DE_opc), .data(DE_in), .dout(DE_out));
     assign DE_in = DM_out;
+    DataExt DataExtender(.opcode(DE_opc), .data(DE_in), .dout(DE_out));
     
    
     // Control Unit   
@@ -112,7 +113,7 @@ module Processor(
     
     // Output Mandate to Synthesize               
     assign out = MCU_pc_mux;
-
+    
 endmodule
 
 // Processor TCL Simulation Commands

@@ -59,6 +59,15 @@ module ControlUnit(
      reg [0:2] state;
      reg [0:2] next_state;
 
+
+    initial begin
+        imm_op <= 0;
+        data_op <= 0;
+        bc_op <= 0;
+        alu_op <= 0;
+        dmem_we_temp <= 0;
+    end
+    
      
     //Combinational Logic
     always@(*) begin
@@ -193,7 +202,7 @@ module ControlUnit(
     end
     
     // State machine
-    always @(state,halt,load,store,branch,fence) begin
+    always @(state,halt,load,store,branch,fence,dmem_we_temp) begin
         imem_rd <= 0;
         pc_we <= 0;
         rf_we <= 0;

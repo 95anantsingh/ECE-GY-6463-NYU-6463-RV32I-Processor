@@ -15,11 +15,11 @@ module IMem(
     );
    
     // Define Instruction Memory
-    reg [31:0] rom [0:`ROM_LENGTH_WORDS-1]; 
+    reg [31:0] IMrom [0:`ROM_LENGTH_WORDS-1]; 
     
     // Load Program into Memory from Memory File
     initial begin
-     $readmemh("imem.mem", rom); 
+     $readmemh("imem.mem", IMrom); 
     end
     
     // Manual Loading of Memory
@@ -39,7 +39,7 @@ module IMem(
 
     always @(posedge clk) begin
         if(rd)
-            instr_out <= rom[addr];
+            instr_out <= IMrom[addr];
     end
 endmodule 
 

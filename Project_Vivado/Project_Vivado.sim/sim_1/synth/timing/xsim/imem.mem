@@ -1,0 +1,15 @@
+lui x2, 0x80000
+lui x3, 0xFFFFF
+addi x4, x3, 0xFF
+
+sw x4, 0(x2)
+sw x4, 4(x2)
+sb x4, 8(x2)
+sh x4, 12(x2)
+sw x4, 16(x2)
+
+lb x6, 8(x2)
+lh x7, 12(x2) 
+lbu x9, 8(x2)
+lhu x10, 12(x2)
+lw x8, 0(x2)

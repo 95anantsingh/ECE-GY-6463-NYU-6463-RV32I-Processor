@@ -15,9 +15,9 @@ module ImmExt(
 
     assign immi = instr[31:20];
     assign immj = {instr[31],instr[19:12], instr[20], instr[30:21]};
-    assign immb= {instr[31], instr[7], instr[30:25], instr[11:8]};
+    assign immb = {instr[31], instr[7], instr[30:25], instr[11:8]};
     assign imms = {instr[31:25], instr[11:7]};
-    assign  immu = instr[31:12];
+    assign immu = instr[31:12];
     
     always@(*) begin
    

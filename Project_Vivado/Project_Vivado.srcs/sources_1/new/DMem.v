@@ -28,15 +28,15 @@ module DMem(
 );
 
     // Define Data Memory
-    reg [31:0] ram [0:`RAM_LENGTH_WORDS-1];
+    reg [31:0] DMram [0:`RAM_LENGTH_WORDS-1];
 
     // Define Special Memory and IO Ports 
-    reg [31:0] rom [0:`ROM_LENGTH + `IO_LENGTH-1];
+    reg [31:0] DMrom [0:`ROM_LENGTH + `IO_LENGTH-1];
  
     // Manual Loading of Memory
 
     initial begin
-//        ram[0]<=32'h0;
+//        DMram[0]<=32'h0;
 //        ram[1]<=32'h1;
 //        ram[2]<=32'h2;
 //        ram[3]<=32'h3;
@@ -44,13 +44,13 @@ module DMem(
 //        ram[1023] <= 32'h11111111;
       
         // ROM
-        rom[0] <= 32'h`TANISHA;
-        rom[1] <= 32'h`ANANT;
-        rom[2] <= 32'h`EESHA;
+        DMrom[0] <= 32'd`TANISHA;
+        DMrom[1] <= 32'd`ANANT;
+        DMrom[2] <= 32'd`EESHA;
        
         // IO
-        rom[3]<=32'd0;
-        rom[4]<=32'd0;
+        DMrom[3] <= 32'd0;
+        DMrom[4] <= 32'd0;
     end
   
 
@@ -62,24 +62,24 @@ module DMem(
             if (addr_in[`STARTING_ADDR_BIT-1]) begin
                 if (we)
                     if(addr==12'd4)
-                        rom[addr-1] <= data_in;                 // IO port
+                        DMrom[addr-1] <= data_in;                 // IO port
                 if (rd)
                     if(addr>12'd3)
-                        data_out <= rom[addr-1];
+                        data_out <= DMrom[addr-1];
                     else
-                        data_out <= rom[addr];
+                        data_out <= DMrom[addr];
             end  
             else begin      
                 if (we[0])
-                    ram[addr][7:0] <= data_in[7:0];
+                    DMram[addr][7:0] <= data_in[7:0];
                 if (we[1])
-                    ram[addr][15:8] <= data_in[15:8];                    
+                    DMram[addr][15:8] <= data_in[15:8];                    
                 if (we[2])
-                    ram[addr][23:16] <= data_in[23:16];
+                    DMram[addr][23:16] <= data_in[23:16];
                 if (we[3])
-                    ram[addr][31:24] <= data_in[31:24];
+                    DMram[addr][31:24] <= data_in[31:24];
                 if (rd)
-                    data_out <= ram[addr];
+                    data_out <= DMram[addr];
             end
         end
     end
