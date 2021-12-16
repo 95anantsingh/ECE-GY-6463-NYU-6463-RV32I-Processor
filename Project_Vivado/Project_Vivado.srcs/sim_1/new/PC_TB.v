@@ -73,6 +73,12 @@ module PC_TB(
         #10;
         if(pc != 32'h01000020) $fatal("Expected output not received");
         #5;
+        rst<=0;
+        next_pc <= 32'h01000021;
+        #10;
+        if(pc != 32'h01000000) $fatal("Expected output not received");
+        #5;
+        
         $display("All test cases passed");
         $finish;
     end
