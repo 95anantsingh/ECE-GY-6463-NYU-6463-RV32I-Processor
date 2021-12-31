@@ -1,7 +1,6 @@
 `timescale 1ns/1ps
 `default_nettype none
 
-
 // Program Counter
 module PCnt(
     input wire clk,
@@ -22,5 +21,7 @@ module PCnt(
             current_pc <= data_in;
         end
     end
+    
     assign data_out = current_pc;
+    
 endmodule

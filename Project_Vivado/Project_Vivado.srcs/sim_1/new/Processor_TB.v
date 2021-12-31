@@ -6,7 +6,6 @@ module Processor_TB(
     );
     reg t_clk = 1;
     reg t_rstn = 0;
-    reg t_out;
     reg [31:0] t_pc;
     
     Processor DUT(.clk(t_clk), .rstn(t_rstn));
@@ -27,7 +26,7 @@ module Processor_TB(
     
         #2;
         t_rstn <= 1;
-        $readmemh("P_TB_test1.mem", Processor.InstructionMemory.rom); 
+        $readmemh("P_TB_test1.mem", IMem.rom); 
         // lui x5, 32
         // auipc x6, 10
         // jal x2, loop
@@ -55,7 +54,7 @@ module Processor_TB(
         //  loop: lui x5, 2 # x5 = {20'd2, 12'b0}, Load Extended(2) in x5
         #3;
         
-        //  jalr x0, 0(x2)  # x0 = PC + 4; PC = x2 + +sign_ext(0), Jump to Address stored in x2
+        //  jalr x0, 0(x2)  # x0 = PC + 4; PC = x2 + sign_ext(0), Jump to Address stored in x2
         #1;
         t_pc <= PCnt.data_out;
         #2;
@@ -370,7 +369,7 @@ module Processor_TB(
         
         // srl x5, x2, x3   # x5 = x2 >> x3[5:0]
         #3;                                                                      
-       if(RegFile.r[5] != 32'b101) $fatal(1,"Error in SRL instruction");
+        if(RegFile.r[5] != 32'b101) $fatal(1,"Error in SRL instruction");
         
         // sra x6, x2, x3   # x6 = signed(x2) >> x3[5:0]
         #3;                                                                      

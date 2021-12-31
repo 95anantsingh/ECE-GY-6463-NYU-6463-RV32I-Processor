@@ -4,22 +4,26 @@ module DMem_TB(
 
     );
     
-reg [31:0] addr;
-reg [31:0] data_in;
-reg [3:0]we;
-reg clk;
-reg rd;
-reg rst;//active low reset
-wire  [31:0] data;
+    reg [31:0] addr;
+    reg [31:0] data_in;
+    reg [3:0]we;
+    reg clk;
+    reg rd;
+    reg rst;
+    wire  [31:0] data;
+    
+    DMem DUT(.addr_in(addr), .data_in(data_in), .we(we), .clk(clk), .rd(rd), .data_out(data));
+    
+    initial begin : CLK_GEN
+        forever begin
+            clk = 1; 
+            #5; 
+            clk = 0; 
+            #5; // 10ns period 
+        end
+    end
 
-DMem DUT(.addr_in(addr), .data_in(data_in), .we(we), .clk(clk), .rd(rd), .data_out(data));
-// generate clock
-always // no sensitivity list, so it always executes
-forever begin
-clk = 1; #5; clk = 0; #5; // 10ns period 
-end
-
-initial begin
+    initial begin
        data_in=32'h01010101;
 
         rd=1'b0;
@@ -142,6 +146,5 @@ initial begin
         
         $display("All tests passed");
         $finish;
-end
-
+    end
 endmodule

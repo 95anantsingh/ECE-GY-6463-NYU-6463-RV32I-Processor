@@ -1,7 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../Project_Vivado.srcs/sources_1/new" \
-"DMem_func_synth.v" \
-"../../../../../Project_Vivado.srcs/sources_1/new/DMem.v" \
-
-# Do not sort compile order
-nosort

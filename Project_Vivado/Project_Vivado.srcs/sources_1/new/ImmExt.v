@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+
+// Immediate Extender
 module ImmExt(
     input wire [2:0] opcode,
     input wire [31:0] instr,
@@ -47,10 +49,7 @@ module ImmExt(
                     imm <= {20'd0,imms[11:0]};
             end
             3'd4: begin     //U-TYPE
-                //if(immu[31]==1'd1)         
-                    //imm <= {immu[31:12], 12'b111111111111};
-                //else
-                    imm <= {immu[31:12], 12'd0};
+                imm <= {immu[31:12], 12'd0};
             end
             default:
                 imm <= 0;

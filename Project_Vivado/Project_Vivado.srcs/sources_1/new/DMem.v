@@ -8,66 +8,42 @@
 `define RAM_ADDR_BITS 12
 
 //Special ROM Values
-`define ROM_LENGTH 3
 `define STARTING_ADDR_BIT 21
 
 `define TANISHA 13391993
 `define ANANT 13643732
 `define EESHA 17456399
 
-//IO Ports
-`define IO_LENGTH 2
 
+// Data Memory
 module DMem(
     input wire clk,
     input wire rd,
     input wire [3:0] we,
     input wire [31:0] addr_in,
     input wire [31:0] data_in,
-    output reg [31:0] data_out
+    output wire [31:0] data_out
 );
 
     // Define Data Memory
     reg [31:0] ram [0:`RAM_LENGTH_WORDS-1];
 
-    // Define Special Memory and IO Ports 
-    reg [31:0] rom [0:`ROM_LENGTH + `IO_LENGTH-1];
- 
-    // Manual Loading of Memory
-
-    initial begin
-//        ram[0]<=32'h0;
-//        ram[1]<=32'h1;
-//        ram[2]<=32'h2;
-//        ram[3]<=32'h3;
-//        ram[1022] <= 32'h22222222;
-//        ram[1023] <= 32'h11111111;
-      
-        // ROM
-        rom[0] <= 32'h`TANISHA;
-        rom[1] <= 32'h`ANANT;
-        rom[2] <= 32'h`EESHA;
-       
-        // IO
-        rom[3]<=32'd0;
-        rom[4]<=32'd0;
-    end
-  
-
     // Address Translation divide by 4
-    wire [11:0] addr=(addr_in[`RAM_ADDR_BITS-1:0]>>2);
+    wire [11:0] addr = (addr_in[`RAM_ADDR_BITS-1:0]>>2);
+
+    reg [31:0] d_out;
 
     always @(posedge clk) begin  
-        //if (addr < 12'd1024) begin
+        if (addr < 12'd1024) begin
             if (addr_in[`STARTING_ADDR_BIT-1]) begin
-                if (we)
-                    if(addr==12'd4)
-                        rom[addr-1] <= data_in;                 // IO port
-                if (rd)
-                    if(addr>12'd3)
-                        data_out <= rom[addr-1];
-                    else
-                        data_out <= rom[addr];
+                if (rd) begin
+                    if(addr=='d0)
+                        d_out <= 32'h`TANISHA;
+                    else if(addr=='d1)
+                        d_out <= 32'h`ANANT;
+                    else if(addr=='d2)
+                        d_out <= 32'h`EESHA;
+                end
             end  
             else begin      
                 if (we[0])
@@ -79,10 +55,13 @@ module DMem(
                 if (we[3])
                     ram[addr][31:24] <= data_in[31:24];
                 if (rd)
-                    data_out <= ram[addr];
+                    d_out <= ram[addr];
             end
-        //end
+        end
     end
+    
+    assign data_out = d_out;
+    
 endmodule
 
 // DMem TCL Simulation Commands

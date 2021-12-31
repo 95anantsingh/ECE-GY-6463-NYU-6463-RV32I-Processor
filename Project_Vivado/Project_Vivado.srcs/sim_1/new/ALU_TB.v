@@ -8,7 +8,7 @@ module ALU_TB(
     
     reg [31:0] operand1;                 // First operand
     reg [31:0] operand2;                 // Second operand
-    reg [3:0] operation;                   // The operation to be performed on the operands
+    reg [3:0] operation;                 // The operation to be performed on the operands
     wire [31:0] ALUresult;
     
     ALU dut(
@@ -19,31 +19,31 @@ module ALU_TB(
         #5;
         operand1 <= 32'd10; 
         operand2 <= 32'd12;       
-        operation <= `ADD;                                                                              //ADD
+        operation <= `ADD;
         #5;
         if (ALUresult != 32'h00000016) $fatal("The expected output was not received");
         #5;
-        operation <= `SUB;                                                                              //SUB
+        operation <= `SUB;
         #5;
         if (ALUresult != 32'hfffffffe) $fatal("The expected output was not received");
         #5;
-        operation <= `SLL;                                                                              //SLL
+        operation <= `SLL;
         #5;
         if (ALUresult != 32'h0000a000) $fatal("The expected output was not received");
         #5;
-        operation <= `SLT;                                                                              //SLT
+        operation <= `SLT;
         #5;
         if (ALUresult != 32'h00000001) $fatal("The expected output was not received");
         #5;
-        operation <= `SLTU;                                                                              //SLTU
+        operation <= `SLTU;
         #5;
         if (ALUresult != 32'h00000001) $fatal("The expected output was not received");
         #5;
-        operation <= `XOR;                                                                              //XOR
+        operation <= `XOR;
         #5;
         if (ALUresult != 32'h00000006) $fatal("The expected output was not received");
         #5;
-        operation <= `SRL;                                                                              //SRL
+        operation <= `SRL;
         #5;
         if (ALUresult != 32'h00000000) $fatal("The expected output was not received");
         #5;
@@ -51,61 +51,61 @@ module ALU_TB(
         #5;
         if (ALUresult != 32'h00000000) $fatal("The expected output was not received");
         #5;
-        operation <= `SRA;                                                                              //SRA
+        operation <= `SRA;
         #5;
         if (ALUresult != 32'h00000000) $fatal("The expected output was not received");
         #5;
-        operation <= `OR;                                                                              //OR
+        operation <= `OR;
         #5;
         if (ALUresult != 32'h0000000e) $fatal("The expected output was not received");
         #5;
-        operation <= `AND;                                                                              //AND
+        operation <= `AND;
         #5;
         if (ALUresult != 32'h00000008) $fatal("The expected output was not received");
         #5;
         operand1 <= 32'b10011011100110101100101011110011;               //Decimal 2610612979
         operand2 <= 32'b00101110010101101001111001010110;               //Decimal 777428566
-        operation <= `ADD;                                                                              //ADD
+        operation <= `ADD;
         #5;
         if (ALUresult != 32'hc9f16949) $fatal("The expected output was not received");
         #5;
-        operation <= `SUB;                                                                              //SUB
+        operation <= `SUB;
         #5;
         if (ALUresult != 32'h6d442c9d) $fatal("The expected output was not received");
         #5;
-        operation <= `SLL;                                                                              //SLL
+        operation <= `SLL;
         #5;
         if (ALUresult != 32'hbcc00000) $fatal("The expected output was not received");
         #5;
-        operation <= `SLT;                                                                              //SLT
+        operation <= `SLT;
         #5;
         if (ALUresult != 32'h00000001) $fatal("The expected output was not received");
         #5;
-        operation <= `SLTU;                                                                              //SLTU
+        operation <= `SLTU;
         #5;
         if (ALUresult != 32'h00000000) $fatal("The expected output was not received");
         #5;
-        operation <= `XOR;                                                                              //XOR
+        operation <= `XOR;
         #5;
         if (ALUresult != 32'hb5cc54a5) $fatal("The expected output was not received");
         #5;
-        operation <= `SRL;                                                                              //SRL
+        operation <= `SRL;
         #5;
         if (ALUresult != 32'h0000026e) $fatal("The expected output was not received");
         #5;
-        operation <= 4'd11;                                                                             //None
+        operation <= 4'd11;
         #5;
         if (ALUresult != 32'h0000026e) $fatal("The expected output was not received");
         #5;
-        operation <= `SRA;                                                                              //SRA
+        operation <= `SRA;
         #5;
         if (ALUresult != 32'hfffffe6e) $fatal("The expected output was not received");
         #5;
-        operation <= `OR;                                                                              //OR
+        operation <= `OR;
         #5;
         if (ALUresult != 32'hbfdedef7) $fatal("The expected output was not received");
         #5;
-        operation <= `AND;                                                                              //AND
+        operation <= `AND;
         #5;
         if (ALUresult != 32'h0a128a52) $fatal("The expected output was not received");
         #10;

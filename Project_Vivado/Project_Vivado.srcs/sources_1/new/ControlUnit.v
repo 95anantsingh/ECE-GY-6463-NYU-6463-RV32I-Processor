@@ -1,6 +1,8 @@
 `timescale 1ns / 1ps
 `include "defines.vh"
 
+
+// Multi Cycle Controller
 module ControlUnit(
     input wire clk, 
     input wire rstn, 
@@ -202,7 +204,6 @@ module ControlUnit(
         dmem_rd <= 0;
         dmem_we <= 4'd0;
         next_state <= 0;
-
         
         case (state)
             // Instruction Fetch
@@ -225,13 +226,14 @@ module ControlUnit(
                 next_state <= `WB;
             end
             // Write Back
-            `WB: begin                  // Always fetch instruction after PC is updated
+            `WB: begin                          // Always fetch instruction after PC is updated
                 pc_we <= 1;
                 if (!(store | branch | fence))  begin
                     rf_we <=1;
                 end
                 next_state <= `IF;
             end
+            //Halt
             `HALT: begin                // Halt
                 next_state <= `HALT;
             end

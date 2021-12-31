@@ -1,6 +1,8 @@
 `timescale 1ns / 1ps
 `include "defines.vh"
 
+
+// Processor Top Module
 module Processor(
     input wire clk,
     input wire rstn,
@@ -112,7 +114,7 @@ module Processor(
                    ALU_out;
     
     // Output Mandate to Synthesize               
-    assign out = MCU_pc_mux;
+    assign out = ALU_out[0];
 
 endmodule
 
