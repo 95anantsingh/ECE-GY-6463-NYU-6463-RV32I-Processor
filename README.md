@@ -1,2 +1,1 @@
-# ECE-GY-6463-NYU-6463-RV32I-Processor
- 
+# NYU-RISCV-32I-Processor
